@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<title>Бичик</title>
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+		<link rel="stylesheet" href="vendor/foundation/css/foundation.css">
+		<link rel="stylesheet" href="vendor/foundation/css/app.css">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
@@ -30,10 +32,40 @@
 						</div>
 						<div class="header_top_url">
 							<div class="header_top_login">
-								<a href="#">Войти</a>
+								<a href="#" data-open="exampleModal1">Войти</a>
 								<div class="line"></div>
-								<a href="#">Регистрация</a>
+								<a href="#" data-open="exampleModal2">Регистрация</a>
 							</div>
+
+							<div class="reveal login_modal_inner" id="exampleModal1" data-reveal>
+								<div class="login_modal">
+									<span class="login_modal_title">ВОЙТИ</span>
+									<form class="login_modal_form" action="index.html" method="post">
+										<input type="text" name="" value="" placeholder="Введите E-Mail">
+										<input type="password" name="" value="" placeholder="Пароль">
+										<input type="submit" name="" value="Войти на сайт">
+									</form>
+								    <div class="login_modal_footer">
+								    	<a href="#">Забыл пароль</a>
+										<a href="#">Пройти регистрацию</a>
+								    </div>
+								</div>
+							</div>
+							<div class="reveal login_modal_inner" id="exampleModal2" data-reveal>
+								<div class="login_modal">
+									<span class="login_modal_title">РЕГИСТРАЦИЯ</span>
+									<form class="login_modal_form" action="index.html" method="post">
+										<input type="text" name="" value="" placeholder="Ваш E-Mail">
+										<input type="password" name="" value="" placeholder="Придумайте пароль">
+										<input type="password" name="" value="" placeholder="Повторите пароль">
+										<input type="submit" name="" value="Зарегистрироваться">
+									</form>
+								    <div class="login_modal_footer">
+								    	<a href="#">У меня уже есть аккаунт! Войти!</a>
+								    </div>
+								</div>
+							</div>
+
 							<div class="header_top_search">
 								<a href="#">
 									<div class="header_top_search_img">
@@ -109,96 +141,98 @@
 				<div class="box_title">
 					<h2>БУКБОКСЫ</h2>
 				</div>
-				<div class="box_content">
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book1.png" alt="">
+				<div class="box_container">
+					<div class="box_content">
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
+								</div>
 							</div>
-							<div class="box_sticker">
-								<img src="img/el_book.svg" alt="">
+							<div class="box_content_title">
+								<h5>Величие и красота рек Якутии</h5>
 							</div>
-						</div>
-						<div class="box_content_title">
-							<h5>Величие и красота рек Якутии</h5>
-						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
-						</div>
-						<a href="#" class="box_url"></a>
-					</div>
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book2.png" alt="">
+							<div class="box_price">
+								<span>2 314 ₽</span>
 							</div>
-							<div class="box_sticker">
-								<img src="img/audio.svg" alt="">
+							<a href="#" class="box_url"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book2.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/audio.svg" alt="">
+								</div>
 							</div>
-						</div>
-						<div class="box_content_title">
-							<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
-						</div>
-						<a href="#" class="box_url"></a>
-					</div>
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book3.png" alt="">
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
 							</div>
-						</div>
-						<div class="box_content_title">
-							<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
-						</div>
-						<a href="#" class="box_url"></a>
-					</div>
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book4.png" alt="">
+							<div class="box_price">
+								<span>2 314 ₽</span>
 							</div>
+							<a href="#" class="box_url"></a>
 						</div>
-						<div class="box_content_title">
-							<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
-						</div>
-						<a href="#" class="box_url"></a>
-					</div>
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book5.png" alt="">
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book3.png" alt="">
+								</div>
 							</div>
-						</div>
-						<div class="box_content_title">
-							<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
-						</div>
-						<a href="#"></a>
-					</div>
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book6.png" alt="">
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
 							</div>
+							<div class="box_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
 						</div>
-						<div class="box_content_title">
-							<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book4.png" alt="">
+								</div>
+							</div>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<div class="box_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
 						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book5.png" alt="">
+								</div>
+							</div>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<div class="box_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#"></a>
 						</div>
-						<a href="#" class="box_url"></a>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book6.png" alt="">
+								</div>
+							</div>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<div class="box_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -206,96 +240,98 @@
 				<div class="box_title">
 					<h2>ПОДАРОЧНЫЕ НАБОРЫ</h2>
 				</div>
-				<div class="box_content">
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book1.png" alt="">
+				<div class="box_container">
+					<div class="box_content">
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
+								</div>
 							</div>
-							<div class="box_sticker">
-								<img src="img/el_book.svg" alt="">
+							<div class="box_content_title">
+								<h5>Величие и красота рек Якутии</h5>
 							</div>
-						</div>
-						<div class="box_content_title">
-							<h5>Величие и красота рек Якутии</h5>
-						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
-						</div>
-						<a href="#" class="box_url"></a>
-					</div>
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book2.png" alt="">
+							<div class="box_price">
+								<span>2 314 ₽</span>
 							</div>
-							<div class="box_sticker">
-								<img src="img/audio.svg" alt="">
+							<a href="#" class="box_url"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book2.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/audio.svg" alt="">
+								</div>
 							</div>
-						</div>
-						<div class="box_content_title">
-							<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
-						</div>
-						<a href="#" class="box_url"></a>
-					</div>
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book3.png" alt="">
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
 							</div>
-						</div>
-						<div class="box_content_title">
-							<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
-						</div>
-						<a href="#" class="box_url"></a>
-					</div>
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book4.png" alt="">
+							<div class="box_price">
+								<span>2 314 ₽</span>
 							</div>
+							<a href="#" class="box_url"></a>
 						</div>
-						<div class="box_content_title">
-							<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
-						</div>
-						<a href="#" class="box_url"></a>
-					</div>
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book5.png" alt="">
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book3.png" alt="">
+								</div>
 							</div>
-						</div>
-						<div class="box_content_title">
-							<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
-						</div>
-						<a href="#"></a>
-					</div>
-					<div class="box_block">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book6.png" alt="">
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
 							</div>
+							<div class="box_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
 						</div>
-						<div class="box_content_title">
-							<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book4.png" alt="">
+								</div>
+							</div>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<div class="box_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
 						</div>
-						<div class="box_price">
-							<span>2 314 ₽</span>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book5.png" alt="">
+								</div>
+							</div>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<div class="box_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#"></a>
 						</div>
-						<a href="#" class="box_url"></a>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book6.png" alt="">
+								</div>
+							</div>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<div class="box_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -396,27 +432,430 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- АКЦИИ -->
 			<div class="box_inner box_3">
 				<div class="box_title">
 					<h2>АКЦИИ</h2>
 				</div>
-				<div class="box_content">
-					<div class="box_block box_aksii">
-						<div class="box_img_content">
-							<div class="box_img">
-								<img src="book/book1.png" alt="">
+				<div class="box_container">
+					<div class="box_container">
+						<div class="box_content">
+							<div class="box_aksii">
+								<div class="box_aksii_content">
+									<div class="box_img_content">
+										<div class="box_img">
+											<img src="book/book1.png" alt="">
+										</div>
+									</div>
+									<div class="box_aksii_title">
+										<h5>Величие и красота рек Якутии</h5>
+									</div>
+									<div class="box_price">
+										<span class="delete">2 314 ₽</span>
+										<span>2 314 ₽</span>
+									</div>
+									<a href="#" class="box_url"></a>
+								</div>
+							</div>
+							<div class="box_aksii">
+								<div class="box_aksii_content">
+									<div class="box_img_content">
+										<div class="box_img">
+											<img src="book/book1.png" alt="">
+										</div>
+									</div>
+									<div class="box_aksii_title">
+										<h5>Величие и красота рек Якутии</h5>
+									</div>
+									<div class="box_price">
+										<span class="delete">2 314 ₽</span>
+										<span>2 314 ₽</span>
+									</div>
+									<a href="#" class="box_url"></a>
+								</div>
+							</div>
+							<div class="box_aksii">
+								<div class="box_aksii_content">
+									<div class="box_img_content">
+										<div class="box_img">
+											<img src="book/book1.png" alt="">
+										</div>
+									</div>
+									<div class="box_aksii_title">
+										<h5>Величие и красота рек Якутии</h5>
+									</div>
+									<div class="box_price">
+										<span class="delete">2 314 ₽</span>
+										<span>2 314 ₽</span>
+									</div>
+									<a href="#" class="box_url"></a>
+								</div>
+							</div>
+							<div class="box_aksii">
+								<div class="box_aksii_content">
+									<div class="box_img_content">
+										<div class="box_img">
+											<img src="book/book1.png" alt="">
+										</div>
+									</div>
+									<div class="box_aksii_title">
+										<h5>Величие и красота рек Якутии</h5>
+									</div>
+									<div class="box_price">
+										<span class="delete">2 314 ₽</span>
+										<span>2 314 ₽</span>
+									</div>
+									<a href="#" class="box_url"></a>
+								</div>
+							</div>
+							<div class="box_aksii">
+								<div class="box_aksii_content">
+									<div class="box_img_content">
+										<div class="box_img">
+											<img src="book/book1.png" alt="">
+										</div>
+									</div>
+									<div class="box_aksii_title">
+										<h5>Величие и красота рек Якутии</h5>
+									</div>
+									<div class="box_price">
+										<span class="delete">2 314 ₽</span>
+										<span>2 314 ₽</span>
+									</div>
+									<a href="#" class="box_url"></a>
+								</div>
+							</div>
+							<div class="box_aksii">
+								<div class="box_aksii_content">
+									<div class="box_img_content">
+										<div class="box_img">
+											<img src="book/book1.png" alt="">
+										</div>
+									</div>
+									<div class="box_aksii_title">
+										<h5>Величие и красота рек Якутии</h5>
+									</div>
+									<div class="box_price">
+										<span class="delete">2 314 ₽</span>
+										<span>2 314 ₽</span>
+									</div>
+									<a href="#" class="box_url"></a>
+								</div>
 							</div>
 						</div>
-						<div class="box_title">
-							<h5>Величие и красота рек Якутии</h5>
+					</div>
+				</div>
+			</div>
+
+			<!-- БЕСТСЕЛЛЕРЫ -->
+			<div class="box_inner box_4">
+				<div class="box_title">
+					<h2>БЕСТСЕЛЛЕРЫ</h2>
+				</div>
+				<div class="box_container">
+					<div class="box_best_inner">
+						<div class="best_block">
+							<div class="best_img">
+								<img src="book/book6.png" alt="">
+								<a href="#"></a>
+							</div>
+							<div class="best_content">
+								<h5><a href="#">Великолепие ювелирных украшений Якутии</a></h5>
+								<span class="best_price">1 089 ₽</span>
+								<div class="best_desc">
+									<p>Равным образом постоянный количественный рост и сфера нашей активности позволяет оценить значение систем массового участия. Задача организации, в особенности же начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития. </p>
+								</div>
+							</div>
 						</div>
-						<div class="box_price">
-							<span class="delete">2 314 ₽</span>
-							<span>2 314 ₽</span>
+						<div class="best_block">
+							<div class="best_img">
+								<img src="book/book6.png" alt="">
+								<a href="#"></a>
+							</div>
+							<div class="best_content">
+								<h5><a href="#">Великолепие ювелирных украшений Якутии</a></h5>
+								<span class="best_price">1 089 ₽</span>
+								<div class="best_desc">
+									<p>Равным образом постоянный количественный рост и сфера нашей активности позволяет оценить значение систем массового участия. Задача организации, в особенности же начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития. </p>
+								</div>
+							</div>
 						</div>
+						<div class="best_block">
+							<div class="best_img">
+								<img src="book/book6.png" alt="">
+								<a href="#"></a>
+							</div>
+							<div class="best_content">
+								<h5><a href="#">Великолепие ювелирных украшений Якутии</a></h5>
+								<span class="best_price">1 089 ₽</span>
+								<div class="best_desc">
+									<p>Равным образом постоянный количественный рост и сфера нашей активности позволяет оценить значение систем массового участия. Задача организации, в особенности же начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- СКОРО В ПРОДАЖЕ -->
+			<div class="box_inner box_1">
+				<div class="box_title">
+					<h2>СКОРО В ПРОДАЖЕ</h2>
+				</div>
+				<div class="box_container">
+					<div class="box_content">
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
+								</div>
+							</div>
+							<span class="box_soon">СКОРО</span>
+							<div class="box_content_title">
+								<h5>Величие и красота рек Якутии</h5>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book2.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/audio.svg" alt="">
+								</div>
+							</div>
+							<span class="box_soon">СКОРО</span>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book3.png" alt="">
+								</div>
+							</div>
+							<span class="box_soon">СКОРО</span>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book4.png" alt="">
+								</div>
+							</div>
+							<span class="box_soon">СКОРО</span>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book5.png" alt="">
+								</div>
+							</div>
+							<span class="box_soon">СКОРО</span>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<a href="#"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book6.png" alt="">
+								</div>
+							</div>
+							<span class="box_soon">СКОРО</span>
+							<div class="box_content_title">
+								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ЛУЧШАЯ ПОДБОРКА ДЕТСКИХ КНИГ -->
+			<div class="box_inner box_5">
+				<div class="box_title">
+					<h2>ЛУЧШАЯ ПОДБОРКА ДЕТСКИХ КНИГ</h2>
+				</div>
+				<div class="box_container">
+					<div class="box_content">
+						<div class="box_aksii">
+							<div class="box_aksii_content">
+								<div class="box_img_content">
+									<div class="box_img">
+										<img src="book/book1.png" alt="">
+									</div>
+								</div>
+								<div class="box_aksii_title">
+									<h5>Величие и красота рек Якутии</h5>
+								</div>
+								<div class="box_price">
+									<span class="delete">2 314 ₽</span>
+									<span>2 314 ₽</span>
+								</div>
+								<a href="#" class="box_url"></a>
+							</div>
+						</div>
+						<div class="box_aksii">
+							<div class="box_aksii_content">
+								<div class="box_img_content">
+									<div class="box_img">
+										<img src="book/book1.png" alt="">
+									</div>
+								</div>
+								<div class="box_aksii_title">
+									<h5>Величие и красота рек Якутии</h5>
+								</div>
+								<div class="box_price">
+									<span class="delete">2 314 ₽</span>
+									<span>2 314 ₽</span>
+								</div>
+								<a href="#" class="box_url"></a>
+							</div>
+						</div>
+						<div class="box_aksii">
+							<div class="box_aksii_content">
+								<div class="box_img_content">
+									<div class="box_img">
+										<img src="book/book1.png" alt="">
+									</div>
+								</div>
+								<div class="box_aksii_title">
+									<h5>Величие и красота рек Якутии</h5>
+								</div>
+								<div class="box_price">
+									<span class="delete">2 314 ₽</span>
+									<span>2 314 ₽</span>
+								</div>
+								<a href="#" class="box_url"></a>
+							</div>
+						</div>
+						<div class="box_aksii">
+							<div class="box_aksii_content">
+								<div class="box_img_content">
+									<div class="box_img">
+										<img src="book/book1.png" alt="">
+									</div>
+								</div>
+								<div class="box_aksii_title">
+									<h5>Величие и красота рек Якутии</h5>
+								</div>
+								<div class="box_price">
+									<span class="delete">2 314 ₽</span>
+									<span>2 314 ₽</span>
+								</div>
+								<a href="#" class="box_url"></a>
+							</div>
+						</div>
+						<div class="box_aksii">
+							<div class="box_aksii_content">
+								<div class="box_img_content">
+									<div class="box_img">
+										<img src="book/book1.png" alt="">
+									</div>
+								</div>
+								<div class="box_aksii_title">
+									<h5>Величие и красота рек Якутии</h5>
+								</div>
+								<div class="box_price">
+									<span class="delete">2 314 ₽</span>
+									<span>2 314 ₽</span>
+								</div>
+								<a href="#" class="box_url"></a>
+							</div>
+						</div>
+						<div class="box_aksii">
+							<div class="box_aksii_content">
+								<div class="box_img_content">
+									<div class="box_img">
+										<img src="book/book1.png" alt="">
+									</div>
+								</div>
+								<div class="box_aksii_title">
+									<h5>Величие и красота рек Якутии</h5>
+								</div>
+								<div class="box_price">
+									<span class="delete">2 314 ₽</span>
+									<span>2 314 ₽</span>
+								</div>
+								<a href="#" class="box_url"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div class="footer">
+				<div class="footer_top">
+					<div class="footer_container">
+						<div class="footer_inner">
+							<div class="footer_block">
+								<span class="footer_block_title">Каталог товаров</span>
+								<ul>
+									<li><a href="#">Книги</a></li>
+									<li><a href="#">Учебные издания</a></li>
+									<li><a href="#">Игрушки и игры</a></li>
+									<li><a href="#">Подарки, сувениры и букбоксы</a></li>
+								</ul>
+							</div>
+							<div class="footer_block">
+								<span class="footer_block_title">Каталог товаров</span>
+								<ul>
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Услуги</a></li>
+									<li><a href="#">Магазины</a></li>
+									<li><a href="#">Новости и события</a></li>
+									<li><a href="#">Оплата и доставка</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="footer_block">
+								<span class="footer_block_title">Каталог товаров</span>
+								<div class="footer_text">
+									<p>Акционерное Общество "Национальная издательская компания "Бичик" им. С.А. Новгородова"</p>
+									<p>г. Якутск, ул. Курашова, 30/1</p>
+									<p>Телефон: 8-800-250-13-38</p>
+									<p>Электронная почта: <a href="mailto:book@bichik.ru">book@bichik.ru</a></p>
+								</div>
+								<div class="footer_soc">
+									<p>Мы в социальных сетях</p>
+									<ul>
+										<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+										<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+										<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<div class="footer_container">
+						<span>2019 НКИ "Бичик"</span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+
+	<script src="vendor/foundation/js/vendor/jquery.js"></script>
+	<script src="vendor/foundation/js/vendor/what-input.js"></script>
+	<script src="vendor/foundation/js/vendor/foundation.js"></script>
+	<script src="vendor/foundation/js/app.js"></script>
 </html>
