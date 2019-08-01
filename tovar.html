@@ -181,10 +181,10 @@
 									<p>Рекомендуем взять с собой в отпуск</p>
 								</div>
 							</div>
-							<div class="tovar_meta">
+							<form class="tovar_meta" action="index.html" method="post">
 								<div class="tovar_radio">
 									<div class="tovar_radio_block">
-										<input name="tovar" id="tovar_1" type="radio" value="tovar_standart" checked>
+										<input name="tovar" id="tovar_1" type="radio" value="1500" checked>
 										<label for="tovar_1">
 											<div class="tovar_radio_icon">
 												<img src="img/tovar_book.svg" alt="">
@@ -193,7 +193,7 @@
 										</label>
 									</div>
 									<div class="tovar_radio_block">
-										<input name="tovar" id="tovar_2" type="radio" value="tovar_electro">
+										<input name="tovar" id="tovar_2" type="radio" value="2000">
 										<label for="tovar_2">
 											<div class="tovar_radio_icon">
 												<img src="img/tovar_electro.svg" alt="">
@@ -202,7 +202,7 @@
 										</label>
 									</div>
 									<div class="tovar_radio_block">
-										<input name="tovar" id="tovar_3" type="radio" value="tovar_audio">
+										<input name="tovar" id="tovar_3" type="radio" value="3000">
 										<label for="tovar_3">
 											<div class="tovar_radio_icon">
 												<img src="img/tovar_audio.svg" alt="">
@@ -215,7 +215,7 @@
 									<div class="tovar_price">
 										<div class="tovar_price_content">
 											<span class="delete">2 300</span>
-											<span>2 100 ₽</span>
+											<span class="tovar_value">2 100 ₽</span>
 										</div>
 										<input type="submit" name="" value="В Корзину">
 									</div>
@@ -226,13 +226,29 @@
 										<p>Язык: Русский</p>
 									</div>
 								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="tovar_desc">
-
+				<div class="tovar_container">
+					<div class="tovar_desc_content">
+						<span class="tovar_desc_title">Описание</span>
+						<div class="tovar_desc_main">
+							<p>Что такое бизнес? Зарабатывание денег и получение сверхприбыли? Безграничная власть и необъятные возможности? "Это ваше ДЕЛО!" - утверждает Олег Торсунов и, опираясь на свой опыт и древние источники мудрости, сопровождает читателя на всем долгом пути от определения цели до самых вершин – создания успешного и полезного людям бизнеса. Какие подводные камни подстерегают начинающего бизнесмена, руководителя и как действовать в </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fragment">
+				<div class="tovar_container">
+					<span class="tovar_desc_title">Описание</span>
+					<div class="fragment_slide_inner">
+						<img src="img/fragment1.jpg" alt="">
+						<img src="img/fragment2.jpg" alt="">
+					</div>
+				</div>
 			</div>
 			<div class="footer">
 				<div class="footer_top">
@@ -295,6 +311,19 @@
 	<script src="main.js"></script>
 
 	<script type="text/javascript">
+		$('.tovar_meta input').on('change', function() {
+			var radioValue = $("input[name='tovar']:checked").val();
+            if(radioValue){
+				$(".tovar_value").text(radioValue);
+            }
+		});
+		$('.fragment_slide_inner').slick({
+			slidesToShow: 1,
+			arrows: false,
+			fade: false,
+			centerPadding: '160px',
+			centerMode: true,
+		});
 		$('.tovar_img_big').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
