@@ -242,11 +242,60 @@
 				</div>
 			</div>
 			<div class="fragment">
-				<div class="tovar_container">
-					<span class="tovar_desc_title">Описание</span>
+				<span class="tovar_desc_title">Описание</span>
+				<div class="fragment_slide_content">
+					<a href="#" class="arrow_left"></a>
 					<div class="fragment_slide_inner">
 						<img src="img/fragment1.jpg" alt="">
 						<img src="img/fragment2.jpg" alt="">
+					</div>
+					<a href="#" class="arrow_right"></a>
+				</div>
+			</div>
+			<div class="feedback">
+				<div class="feedback_container">
+					<span class="tovar_desc_title">Отзывы</span>
+					<div class="feedback_content">
+						<div class="feedback_block">
+							<div class="feedback_avatar">
+								<img src="img/avatar1.png" alt="">
+							</div>
+							<div class="feedback_desc">
+								<div class="feedback_name">
+									<span>Татьяна, вчера 15:43</span>
+								</div>
+								<div class="feedback_text">
+									<div class="feedback_text_content">
+										<p>Первое слово , которое приходит на ум после прочтения книги - мило))) Именно такое впечатления у меня от книги.. ГГя довольно милая, вечно попадает в какие-то мелкие неприятности, но при этом остаётся оптимисткой... ГГой , хоть и описывали его грозным, на самом деле тоже выглядит заботливым Первое слово , которое приходит на ум после прочтения книги - мило))) Именно такое впечатления у меня от книги.. ГГя довольно милая, вечно попадает в какие-то мелкие неприятности, но при этом остаётся оптимисткой... ГГой , хоть и описывали его грозным, на самом деле тоже выглядит заботливым </p>
+									</div>
+									<a href="#!" class="hide_text" onclick="hidetext();">Показать полностью</a>
+								</div>
+							</div>
+						</div>
+						<div class="feedback_block">
+							<div class="feedback_avatar">
+								<img src="img/avatar2.png" alt="">
+							</div>
+							<div class="feedback_desc">
+								<div class="feedback_name">
+									<span>Татьяна, вчера 15:43</span>
+								</div>
+								<div class="feedback_text">
+									<div class="feedback_text_content">
+										<p>Первое слово , которое приходит на ум после прочтения книги - мило))) Именно такое впечатления у меня от книги.. ГГя довольно милая, вечно попадает в какие-то мелкие неприятности, но при этом остаётся оптимисткой... ГГой , хоть и описывали его грозным, на самом деле тоже выглядит заботливым </p>
+									</div>
+									<a href="#!" class="hide_text" onclick="hidetext();">Показать полностью</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tovar_video">
+				<div class="tovar_container">
+					<span class="tovar_desc_title">Видео</span>
+					<div class="video_inner">
+						<img src="img/video.png" alt="">
 					</div>
 				</div>
 			</div>
@@ -311,6 +360,11 @@
 	<script src="main.js"></script>
 
 	<script type="text/javascript">
+		function hidetext() {
+			$('.feedback_text_content').css("overflow", "visible");
+			$('.feedback_text_content').css("height", "auto");
+			$('.hide_text').css("display", "none");
+		}
 		$('.tovar_meta input').on('change', function() {
 			var radioValue = $("input[name='tovar']:checked").val();
             if(radioValue){
@@ -319,10 +373,14 @@
 		});
 		$('.fragment_slide_inner').slick({
 			slidesToShow: 1,
-			arrows: false,
+			variableWidth: true,
+			arrows: true,
 			fade: false,
-			centerPadding: '160px',
+			centerPadding: '100px',
 			centerMode: true,
+			infinite: false,
+			prevArrow: $('.arrow_left'),
+			nextArrow: $('.arrow_right'),
 		});
 		$('.tovar_img_big').slick({
 			slidesToShow: 1,

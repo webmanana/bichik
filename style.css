@@ -917,9 +917,13 @@ input::placeholder {
 .tovar_img_big, .tovar_slide {
     visibility: hidden;
     overflow: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
 }
 .tovar_img_big.slick-initialized, .tovar_slide.slick-initialized {
     visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
 }
 .tovar_slide .slick-slide {
     height: 80px;
@@ -1123,5 +1127,149 @@ input::placeholder {
     line-height: 24px;
     color: #555555;
 }
-.fragment_slide img {
+.fragment .tovar_desc_title {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+.fragment_slide_inner  .slick-slide {
+    max-width: 960px;
+}
+.fragment_slide_content {
+    position: relative;
+}
+.arrow_right {
+    width: 26px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.03);
+    background-image: url(./img/arrow_right.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    padding: 8px;
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 46%;
+    z-index: 11;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+.arrow_right.slick-disabled, .arrow_left.slick-disabled {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+}
+.arrow_left:hover, .arrow_right:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.fragment_slide_inner .slick-slide:hover {
+    cursor: pointer;
+}
+.arrow_left {
+    width: 26px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.03);
+    background-image: url(./img/arrow_left.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    padding: 8px;
+    display: flex;
+    position: absolute;
+    left: 15px;
+    top: 46%;
+    z-index: 11;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+.feedback_container {
+    max-width: 715px;
+    margin: 0 auto;
+}
+.feedback_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40px;
+}
+.feedback_block {
+    display: flex;
+    flex-direction: row;
+}
+.feedback_avatar {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.feedback_avatar img {
+    border-radius: 50%;
+}
+.feedback_desc {
+    flex: 1;
+    padding-left: 15px;
+}
+.feedback_name span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+}
+.feedback_text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #555555;
+}
+.feedback_text_content {
+    height: 80px;
+    overflow: hidden;
+}
+.feedback_text p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.feedback_block {
+    margin-bottom: 60px;
+}
+.hide_text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #9B1515;
+    border-bottom: 1px solid #9B1515;
+}
+.hide_text:hover {
+    border: none;
+}
+.feedback {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.fragment_slide_inner {
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+}
+.fragment_slide_inner.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+.video_inner {
+    padding-top: 50px;
+}
+.tovar_video {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #eee;
 }
