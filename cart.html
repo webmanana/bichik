@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Бичик | Корзина заказа</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+		<link rel="stylesheet" href="vendor/foundation/css/foundation.css">
+		<link rel="stylesheet" href="vendor/foundation/css/app.css">
+		<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+		<link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="header_inner">
+				<div class="header_logo">
+					<a href="#">
+						<div class="header_logo_img">
+							<img src="img/logo.png" alt="Бичик">
+						</div>
+					</a>
+				</div>
+				<div class="header_menu_inner">
+					<div class="header_top_content">
+						<div class="header_top_menu">
+							<ul>
+								<li><a href="#">Издательство</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Магазины</a></li>
+								<li><a href="#">Новости и события</a></li>
+								<li><a href="#">Оплата и доставка</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="header_top_url">
+							<div class="header_top_login">
+								<a href="#" data-open="exampleModal1">Войти</a>
+								<div class="line"></div>
+								<a href="#" data-open="exampleModal2">Регистрация</a>
+							</div>
+
+							<div class="reveal login_modal_inner" id="exampleModal1" data-reveal>
+								<div class="login_modal">
+									<span class="login_modal_title">ВОЙТИ</span>
+									<form class="login_modal_form" action="index.html" method="post">
+										<input type="text" name="" value="" placeholder="Введите E-Mail">
+										<input type="password" name="" value="" placeholder="Пароль">
+										<input type="submit" name="" value="Войти на сайт">
+									</form>
+								    <div class="login_modal_footer">
+								    	<a href="#">Забыл пароль</a>
+										<a href="#">Пройти регистрацию</a>
+								    </div>
+								</div>
+							</div>
+							<div class="reveal login_modal_inner" id="exampleModal2" data-reveal>
+								<div class="login_modal">
+									<span class="login_modal_title">РЕГИСТРАЦИЯ</span>
+									<form class="login_modal_form" action="index.html" method="post">
+										<input type="text" name="" value="" placeholder="Ваш E-Mail">
+										<input type="password" name="" value="" placeholder="Придумайте пароль">
+										<input type="password" name="" value="" placeholder="Повторите пароль">
+										<input type="submit" name="" value="Зарегистрироваться">
+									</form>
+								    <div class="login_modal_footer">
+								    	<a href="#">У меня уже есть аккаунт! Войти!</a>
+								    </div>
+								</div>
+							</div>
+
+							<div class="header_top_search">
+								<a href="#">
+									<div class="header_top_search_img">
+										<img src="img/search.svg" alt="">
+									</div>
+									<span>Поиск</span>
+								</a>
+							</div>
+							<div class="header_top_cart">
+								<a href="#">
+									<div class="cart_inner">
+										<div class="cart_img">
+											<img src="img/cart.svg" alt="">
+										</div>
+										<div class="cart_col">
+											<span>0</span>
+										</div>
+									</div>
+									<span class="cart_text">Корзина</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="header_bottom_content">
+						<div class="header_bottom_menu">
+							<ul>
+								<li><a href="#"><img src="img/burger.svg" alt=""></a></li>
+								<li><a href="#">Книги</a></li>
+								<li><a href="#">Учебные издания</a></li>
+								<li><a href="#">Игрушки и игры</a></li>
+								<li><a href="#">Подарки, сувениры и букбоксы</a></li>
+							</ul>
+						</div>
+						<div class="header_bottom_stock">
+							<a href="#" class="stock_1">
+								<div class="stock_img">
+									<img src="img/procent.svg" alt="">
+								</div>
+								<span>Акции</span>
+							</a>
+							<a href="#" class="stock_2">
+								<div class="stock_img">
+									<img src="img/star.svg" alt="">
+								</div>
+								<span>Новинки</span>
+							</a>
+							<a href="#" class="stock_3">
+								<div class="stock_img">
+									<img src="img/king.svg" alt="">
+								</div>
+								<span>Бестселлеры</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="page_inner">
+				<div class="page_container">
+					<div class="breadcrumb">
+						<a href="#">Главная</a> — <span>Корзина заказа</span>
+					</div>
+					<div class="page_title">
+						<h1>КОРЗИНА ЗАКАЗА</h1>
+					</div>
+					<div class="cart_tovar">
+						<div class="cart_tovar_top">
+							<span>В вашей корзине 2 товара на сумму <b class="cart_tovar_top_price">2300</b> ₽ </span>
+						</div>
+						<div class="cart_tovar_inner">
+							<div class="cart_tovar_block">
+								<div class="cart_tovar_img">
+									<img src="img/cart_tovar1.png" alt="">
+								</div>
+								<div class="cart_tovar_title">
+									<a href="#"><h1>Величие и красота рек Якутии</h1></a>
+									<span>И.М. Андросов</span>
+								</div>
+								<div class="cart_tovar_col">
+									<div class="input-group plus-minus-input">
+										<div class="input-group-button">
+											<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity">
+												<div class="minus_ico"></div>
+											</button>
+										</div>
+										<input class="input-group-field" type="number" name="quantity" min="1" value="1">
+										<div class="input-group-button">
+											<button type="button" class="plus" data-quantity="plus" data-field="quantity">
+												<div class="plus_ico"></div>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="cart_tovar_price">
+									<span class="delete">2 600 ₽</span>
+									<span class="single_total_number" data-priceone="" data-quan="" data-price="2300">2 300 ₽</span>
+								</div>
+							</div>
+							<div class="cart_tovar_block">
+								<div class="cart_tovar_img">
+									<img src="img/cart_tovar1.png" alt="">
+								</div>
+								<div class="cart_tovar_title">
+									<a href="#"><h1>Величие и красота рек Якутии</h1></a>
+									<span>И.М. Андросов</span>
+								</div>
+								<div class="cart_tovar_col">
+									<div class="input-group plus-minus-input">
+										<div class="input-group-button">
+											<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity1">
+												<div class="minus_ico"></div>
+											</button>
+										</div>
+										<input class="input-group-field" type="number" name="quantity1" min="1" value="1">
+										<div class="input-group-button">
+											<button type="button" class="plus" data-quantity="plus" data-field="quantity1">
+												<div class="plus_ico"></div>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="cart_tovar_price">
+									<span class="delete">2 600 ₽</span>
+									<span class="single_total_number" data-priceone="" data-quan="" data-price="4300">4 300 ₽</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="page_title">
+						<h1>ОФОРМЛЕНИЕ ЗАКАЗА</h1>
+					</div>
+					<form class="cart_form" action="index.html" method="post">
+						<div class="cart_total">
+							<span class="cart_total_title">1. Выберите способ оплаты</span>
+							<div class="cart_total_block">
+								<div class="cart_radio_block">
+									<input name="total" id="total_1" type="radio" value="1" checked>
+									<label for="total_1">
+										<span>Наличными</span>
+										<p>Бумажная книга</p>
+									</label>
+								</div>
+								<div class="cart_radio_block">
+									<input name="total" id="total_2" type="radio" value="2">
+									<label for="total_2">
+										<span>Банковской картой</span>
+										<p>При получении заказа</p>
+									</label>
+								</div>
+								<div class="cart_radio_block">
+									<input name="total" id="total_3" type="radio" value="3">
+									<label for="total_3">
+										<span>Безналичным расчетом </span>
+										<p>Для юридических лиц</p>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="cart_delivery">
+							<span class="cart_total_title">2. Куда доставить заказ</span>
+							<div class="cart_delivery_inner">
+								<div class="cart_delivery_select">
+									<div class="cart_delivery_desc">
+										<span>Город, населенный пункт</span>
+									</div>
+									<div class="cart_delivery_select_block">
+										<select class="js-example-basic-single" name="state">
+										    <option value="YK">Якутск</option>
+										    <option value="PO">Покровск</option>
+										</select>
+										<div class="cart_delivery_select_text">
+											Например, <span>Якутск</span>, <span>Покровск</span>
+										</div>
+									</div>
+								</div>
+								<div class="cart_delivery_radio_inner">
+									<div class="cart_delivery_radio_content">
+										<div class="cart_delivery_block">
+											<input name="delivery" id="delivery_1" type="radio" value="1" checked>
+											<label for="delivery_1">
+												<div class="cart_delivery_input">
+													<div class="cart_delivery_radius"></div>
+												</div>
+												<div class="cart_delivery_input_text">
+													<span>Курьером до двери</span>
+													<p>Доставка курьером и в пункт самовывоза доступна только при заказе товаров на 1 500 ₽.  Добавьте товаров еще на 188 ₽</p>
+												</div>
+												<span class="cart_delivery_price">100 ₽</span>
+											</label>
+										</div>
+										<div class="cart_delivery_block">
+											<input name="delivery" id="delivery_2" type="radio" value="2">
+											<label for="delivery_2">
+												<div class="cart_delivery_input">
+													<div class="cart_delivery_radius"></div>
+												</div>
+												<div class="cart_delivery_input_text">
+													<span>В пункт самовывоза</span>
+													<p>от 2 до 4 дней</p>
+												</div>
+												<span class="cart_delivery_price">0 ₽</span>
+											</label>
+										</div>
+										<div class="cart_delivery_block">
+											<input name="delivery" id="delivery_3" type="radio" value="3">
+											<label for="delivery_3">
+												<div class="cart_delivery_input">
+													<div class="cart_delivery_radius"></div>
+												</div>
+												<div class="cart_delivery_input_text">
+													<span>Почтой России</span>
+													<p>Почта России работает по предоплате. Смените способ оплаты.</p>
+												</div>
+												<span class="cart_delivery_price">100 ₽</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="submit_content">
+							<input type="submit" id="sumbit1" name="" value="">
+							<label for="sumbit1" class="submit_label">
+								Подтвердить заказ на <b>2 630</b> ₽ и получить книги
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="footer_top">
+					<div class="footer_container">
+						<div class="footer_inner">
+							<div class="footer_block">
+								<span class="footer_block_title">Каталог товаров</span>
+								<ul>
+									<li><a href="#">Книги</a></li>
+									<li><a href="#">Учебные издания</a></li>
+									<li><a href="#">Игрушки и игры</a></li>
+									<li><a href="#">Подарки, сувениры и букбоксы</a></li>
+								</ul>
+							</div>
+							<div class="footer_block">
+								<span class="footer_block_title">Каталог товаров</span>
+								<ul>
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Услуги</a></li>
+									<li><a href="#">Магазины</a></li>
+									<li><a href="#">Новости и события</a></li>
+									<li><a href="#">Оплата и доставка</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="footer_block">
+								<span class="footer_block_title">Каталог товаров</span>
+								<div class="footer_text">
+									<p>Акционерное Общество "Национальная издательская компания "Бичик" им. С.А. Новгородова"</p>
+									<p>г. Якутск, ул. Курашова, 30/1</p>
+									<p>Телефон: 8-800-250-13-38</p>
+									<p>Электронная почта: <a href="mailto:book@bichik.ru">book@bichik.ru</a></p>
+								</div>
+								<div class="footer_soc">
+									<p>Мы в социальных сетях</p>
+									<ul>
+										<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+										<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+										<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<div class="footer_container">
+						<span>2019 НКИ "Бичик"</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="vendor/foundation/js/vendor/jquery.js"></script>
+	<script src="vendor/foundation/js/vendor/what-input.js"></script>
+	<script src="vendor/foundation/js/vendor/foundation.js"></script>
+	<script src="vendor/foundation/js/app.js"></script>
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script src="vendor/select2/dist/js/select2.min.js"></script>
+	<script src="main.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+	    $('.js-example-basic-single').select2();
+	});
+	jQuery(document).ready(function(){
+		$('.single_total_number').text($('.single_total_number').data('price'));
+		$('.single_total_number').attr("data-priceone",$('.single_total_number').data('price'));
+		$('.single_total_number').attr("data-quan",1);
+	});
+
+	function changecalc(e){
+		var oldprice = $('.single_total_number').attr("data-priceone");
+		var newprice = oldprice*$('.input-group-field').val();
+		// $('.single_total_number').text(newprice);
+		$(e).parents('.cart_tovar_block').find('.single_total_number').text(newprice);
+		totalprice();
+	}
+	function totalprice() {
+		var total = 0;
+		$('.single_total_number').each(function() {
+			var single = $(this).text();
+			total = total + parseInt(single);
+			$('.cart_tovar_top_price').text(total);
+		});
+	}
+	$('.reload').on('click', function() {
+		$(this).parent('.cart_tovar_col').find('.input-group-field').val();
+		$('.single_total_number').attr("data-quan", $(this).val());
+	});
+	jQuery(document).ready(function(){
+	   $('[data-quantity="plus"]').on("click",function(e){
+		   // Stop acting like a button
+		   e.preventDefault();
+		   // Get the field name
+		   fieldName = $(this).attr('data-field');
+		   // Get its current value
+		   var currentVal = parseInt($('input[name='+fieldName+']').val());
+		   // If is not undefined
+		   if (!isNaN(currentVal)) {
+			   // Increment
+			   $('input[name='+fieldName+']').val(currentVal + 1);
+		   } else {
+			   // Otherwise put a 0 there
+			   $('input[name='+fieldName+']').val(1);
+		   }
+		   if (currentVal == 1) {
+			   $(this).parents(".plus-minus-input").find(".minus").removeClass("disabled");
+		   }
+		   changecalc(this);
+	   });
+	   // This button will decrement the value till 0
+	   $('[data-quantity="minus"]').click(function(e) {
+		   // Stop acting like a button
+		   e.preventDefault();
+		   // Get the field name
+		   fieldName = $(this).attr('data-field');
+		   // Get its current value
+		   var currentVal = parseInt($('input[name='+fieldName+']').val());
+
+
+		   if (currentVal == 2) {
+			   $(".minus").addClass("disabled");
+		   }
+		   // If it isn't undefined or its greater than 0
+		   if (!isNaN(currentVal) && currentVal > 1) {
+			   // Decrement one
+			   $('input[name='+fieldName+']').val(currentVal - 1);
+		   } else {
+			   // Otherwise put a 0 there
+			   $('input[name='+fieldName+']').val(1);
+		   }
+		   changecalc(this);
+	   });
+   });
+		function hidetext() {
+			$('.feedback_text_content').css("overflow", "visible");
+			$('.feedback_text_content').css("height", "auto");
+			$('.hide_text').css("display", "none");
+		}
+		$('.tovar_meta input').on('change', function() {
+			var radioValue = $("input[name='tovar']:checked").val();
+            if(radioValue){
+				$(".tovar_value").text(radioValue);
+            }
+		});
+	</script>
+</html>
