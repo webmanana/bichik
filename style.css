@@ -1745,6 +1745,9 @@ input::placeholder {
   -webkit-appearance: none;
           appearance: none;
 }
+.plus-minus-input:hover {
+    border-color: #9B1515;
+}
 .plus-minus-input .input-group-field {
     text-align: center;
     margin-left: 6px;
@@ -1870,6 +1873,7 @@ input::placeholder {
 }
 .cart_radio_block label:hover {
     cursor: pointer;
+    border-color: #9B1515;
 }
 .cart_radio_block input[type=radio]:checked+label {
     border: 1px solid #9B1515;
@@ -2013,6 +2017,12 @@ input::placeholder {
     flex: 1;
 }
 .cart_delivery_block input[type=radio]:checked+label {
+    background: #F9F9F9;
+}
+.select2-container--default .select2-selection--single:hover {
+    border-color: #9B1515;
+}
+.cart_delivery_block label:hover {
     background: #F9F9F9;
 }
 .cart_delivery_block input[type=radio]:checked + label .cart_delivery_input .cart_delivery_radius{
