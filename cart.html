@@ -135,7 +135,7 @@
 					</div>
 					<div class="cart_tovar">
 						<div class="cart_tovar_top">
-							<span>В вашей корзине 2 товара на сумму <b class="cart_tovar_top_price">2300</b> ₽ </span>
+							<span>В вашей корзине <b class="cart_all_col"></b> товара на сумму <b class="cart_tovar_top_price">2300</b> ₽ </span>
 						</div>
 						<div class="cart_tovar_inner">
 							<div class="cart_tovar_block">
@@ -184,6 +184,34 @@
 										<input class="input-group-field" type="number" name="quantity1" min="1" value="1">
 										<div class="input-group-button">
 											<button type="button" class="plus" data-quantity="plus" data-field="quantity1">
+												<div class="plus_ico"></div>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="cart_tovar_price">
+									<span class="delete">2 600 ₽</span>
+									<span class="single_total_number" data-priceone="" data-quan="" data-price="4300">4 300 ₽</span>
+								</div>
+							</div>
+							<div class="cart_tovar_block">
+								<div class="cart_tovar_img">
+									<img src="img/cart_tovar1.png" alt="">
+								</div>
+								<div class="cart_tovar_title">
+									<a href="#"><h1>Величие и красота рек Якутии</h1></a>
+									<span>И.М. Андросов</span>
+								</div>
+								<div class="cart_tovar_col">
+									<div class="input-group plus-minus-input">
+										<div class="input-group-button">
+											<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity2">
+												<div class="minus_ico"></div>
+											</button>
+										</div>
+										<input class="input-group-field" type="number" name="quantity2" min="1" value="1">
+										<div class="input-group-button">
+											<button type="button" class="plus" data-quantity="plus" data-field="quantity2">
 												<div class="plus_ico"></div>
 											</button>
 										</div>
@@ -363,19 +391,28 @@
 	$(document).ready(function() {
 	    $('.js-example-basic-single').select2();
 	});
+
+	// Преобразовать текст в атрибут и количество товаров
 	jQuery(document).ready(function(){
-		$('.single_total_number').text($('.single_total_number').data('price'));
-		$('.single_total_number').attr("data-priceone",$('.single_total_number').data('price'));
-		$('.single_total_number').attr("data-quan",1);
+		var col = 0;
+		$('.single_total_number').each(function() {
+			$(this).text($(this).data('price'));
+			$(this).attr("data-priceone",$(this).data('price'));
+			$(this).attr("data-quan",1);
+			col = col + 1;
+		});
+		$('.cart_all_col').text(col);
 	});
 
+	// Количество товара * на цену
 	function changecalc(e){
-		var oldprice = $('.single_total_number').attr("data-priceone");
-		var newprice = oldprice*$('.input-group-field').val();
-		// $('.single_total_number').text(newprice);
+		var oldprice = $(e).parents('.cart_tovar_block').find('.single_total_number').attr("data-priceone");
+		var newprice = oldprice*$(e).parents('.cart_tovar_block').find('.input-group-field').val();
 		$(e).parents('.cart_tovar_block').find('.single_total_number').text(newprice);
 		totalprice();
 	}
+
+	// Общая сумма
 	function totalprice() {
 		var total = 0;
 		$('.single_total_number').each(function() {
@@ -384,10 +421,8 @@
 			$('.cart_tovar_top_price').text(total);
 		});
 	}
-	$('.reload').on('click', function() {
-		$(this).parent('.cart_tovar_col').find('.input-group-field').val();
-		$('.single_total_number').attr("data-quan", $(this).val());
-	});
+
+	// Плюс минус
 	jQuery(document).ready(function(){
 	   $('[data-quantity="plus"]').on("click",function(e){
 		   // Stop acting like a button
@@ -433,16 +468,17 @@
 		   changecalc(this);
 	   });
    });
-		function hidetext() {
-			$('.feedback_text_content').css("overflow", "visible");
-			$('.feedback_text_content').css("height", "auto");
-			$('.hide_text').css("display", "none");
-		}
-		$('.tovar_meta input').on('change', function() {
-			var radioValue = $("input[name='tovar']:checked").val();
-            if(radioValue){
-				$(".tovar_value").text(radioValue);
-            }
-		});
+
+	function hidetext() {
+		$('.feedback_text_content').css("overflow", "visible");
+		$('.feedback_text_content').css("height", "auto");
+		$('.hide_text').css("display", "none");
+	}
+	$('.tovar_meta input').on('change', function() {
+		var radioValue = $("input[name='tovar']:checked").val();
+        if(radioValue){
+			$(".tovar_value").text(radioValue);
+        }
+	});
 	</script>
 </html>
