@@ -30,6 +30,35 @@ input::placeholder {
     background: #F9F9F9;
 }
 /* header */
+ul.hidden-links.hidden {
+    display: none;
+}
+ul.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    overflow: hidden;
+}
+ul.hidden-links {
+    position: absolute;
+    background: #fff;
+    right: 0;
+    top: 100%;
+    z-index: 1111;
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: none;
+    -webkit-box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.06), 0 3px 14px 2px rgba(0, 0, 0, 0.04), 0 5px 5px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.06), 0 3px 14px 2px rgba(0, 0, 0, 0.04), 0 5px 5px -3px rgba(0, 0, 0, 0.1);
+}
+.topmenu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .header_inner {
 	display: flex;
 	flex-direction: row;
@@ -67,6 +96,8 @@ input::placeholder {
 }
 .header_top_menu {
 	padding: 20px;
+    position: relative;
+    display: flex;
 }
 .header_top_menu ul {
 	display: flex;
@@ -82,6 +113,16 @@ input::placeholder {
 .header_top_menu ul li a:hover {
 	text-decoration: underline;
 	color: #9B1515;
+}
+.hidden-links li a {
+    padding: 8px 16px;
+    width: 100%;
+}
+.hidden-links li {
+    padding-right: 0!important;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    width: 100%;
 }
 .header_top_url {
 	display: flex;
@@ -2068,4 +2109,33 @@ input::placeholder {
 }
 .submit_label:hover {
     background-color: #c32020;
+}
+@media (max-width: 1600px) {
+    .header_top_menu ul li, .header_bottom_menu ul li {
+        padding-right: 25px;
+    }
+    .box_aksii .box_price span.delete {
+        padding-right: 5px;
+    }
+    .box_aksii_content {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 1400px) {
+    .header_top_menu ul li, .header_bottom_menu ul li {
+        padding-right: 15px;
+    }
+    .best_img {
+        width: 40%;
+    }
+    .best_content {
+        width: 60%;
+    }
+    .box_aksii {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
