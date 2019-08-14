@@ -12,6 +12,9 @@
 	<body>
 		<div class="wrap">
 			<div class="header_inner">
+				<div class="mobile_burger">
+					<a href="#" data-toggle="offCanvas"><img src="img/burger.svg" alt=""></a>
+				</div>
 				<div class="header_logo">
 					<a href="#">
 						<div class="header_logo_img">
@@ -30,7 +33,7 @@
 								<li><a href="#">Оплата и доставка</a></li>
 								<li><a href="#">Контакты</a></li>
 							</ul>
-							<button class="hidden">...</button>
+							<button class="hidden">Еще...</button>
 							<ul class='hidden-links hidden'></ul>
 						</div>
 						<div class="header_top_url">
@@ -855,6 +858,20 @@
 				</div>
 			</div>
 		</div>
+		<div class="off-canvas-wrapper">
+			<div class="off-canvas position-left mobile_canvas" id="offCanvas" data-off-canvas>
+				<ul class="mobile-ofc vertical menu">
+					<li><a href="#" class="">Каталог</a></li>
+					<li><a href="#" class="">Личный кабинет</a></li>
+					<li><a href="#" class="">Издательствот</a></li>
+					<li><a href="#" class="active">Услуги</a></li>
+					<li><a href="#" class="">Магазины</a></li>
+					<li><a href="#" class="">Новости и события</a></li>
+					<li><a href="#" class="">Оплата и доставка</a></li>
+					<li><a href="#" class="">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
 	</body>
 
 	<script src="vendor/foundation/js/vendor/jquery.js"></script>
@@ -864,27 +881,76 @@
 	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script src="main.js"></script>
 	<script type="text/javascript">
-	$('.box_content').slick({
-		arrows: false,
-		fade: false,
-		responsive: [
-		    {
-		      breakpoint: 1500,
-		      settings: "unslick"
-		    },
-			{
-			  breakpoint: 1350,
-			  settings: {
+	$(window).on('load resize', function() {
+	    if ($(window).width() < 1400) {
+		    $('.box_content').slick({
+	      		arrows: false,
+	      		fade: false,
 				prevArrow: $('.left_slide'),
 				nextArrow: $('.right_slide'),
 				slidesToShow: 5,
-				slidesToScroll: 1,
-			  }
-			}
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
-		]
+				slidesToScroll: 5,
+				swipeToSlide: true,
+				cssEase: 'linear',
+				responsive: [
+					{
+					  breakpoint: 1200,
+					  settings: {
+						slidesToShow: 4,
+					  }
+					},
+					{
+					  breakpoint: 920,
+					  settings: {
+						slidesToShow: 3,
+					  }
+					},
+					{
+					  breakpoint: 768,
+					  settings: {
+						slidesToShow: 2,
+					  }
+					},
+					{
+					  breakpoint: 532,
+					  settings: {
+						slidesToShow: 1,
+					  }
+					}
+				]
+	      	});
+	    } else {
+	   		$(".box_content").slick("unslick");
+	    }
+
+		if ($(window).width() < 768) {
+			$('.box_best_inner').slick({
+	      		arrows: false,
+	      		fade: false,
+				prevArrow: $('.left_slide'),
+				nextArrow: $('.right_slide'),
+				slidesToShow: 2,
+				slidesToScroll: 5,
+				swipeToSlide: true,
+				cssEase: 'linear',
+				responsive: [
+					{
+					  breakpoint: 768,
+					  settings: {
+						slidesToShow: 2,
+					  }
+					},
+					{
+					  breakpoint: 532,
+					  settings: {
+						slidesToShow: 1,
+					  }
+					}
+				]
+	      	});
+		} else {
+ 	   		$(".box_best_inner").slick("unslick");
+ 	    }
 	});
 	</script>
 </html>
