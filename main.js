@@ -25,7 +25,7 @@ $(window).on('load resize', function() {
 		  var $nav = $('.greedy');
 		  var $btn = $('.greedy button');
 		  var $vlinks = $('.greedy .links');
-		  var $hlinks = $('.greedy .hidden-links');
+		  var $hlinks = $('.greedy .dropdown_menu');
 
 		  var numOfItems = 0;
 		  var totalSpace = 0;

@@ -12,6 +12,9 @@
 	<body>
 		<div class="wrap">
 			<div class="header_inner">
+				<div class="mobile_burger">
+					<a href="#" data-toggle="offCanvas"><img src="img/burger.svg" alt=""></a>
+				</div>
 				<div class="header_logo">
 					<a href="#">
 						<div class="header_logo_img">
@@ -21,8 +24,8 @@
 				</div>
 				<div class="header_menu_inner">
 					<div class="header_top_content">
-						<div class="header_top_menu">
-							<ul>
+						<div class="header_top_menu topmenu greedy">
+							<ul class="links">
 								<li><a href="#">Издательство</a></li>
 								<li><a href="#">Услуги</a></li>
 								<li><a href="#">Магазины</a></li>
@@ -30,6 +33,8 @@
 								<li><a href="#">Оплата и доставка</a></li>
 								<li><a href="#">Контакты</a></li>
 							</ul>
+							<button class="hidden" data-toggle="dropdown">Еще...</button>
+							<ul class='hidden-links hidden dropdown-pane dropdown_menu'  id="dropdown" data-dropdown data-auto-focus="true" data-close-on-click="true" data-close-on-click-inside="true"></ul>
 						</div>
 						<div class="header_top_url">
 							<div class="header_top_login">

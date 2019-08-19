@@ -30,6 +30,9 @@ input::placeholder {
     background: #F9F9F9;
 }
 /* header */
+.dropdown_menu {
+    padding: 0;
+}
 ul.hidden-links.hidden {
     display: none;
 }
