@@ -886,38 +886,38 @@
 		    $('.box_content').slick({
 	      		arrows: false,
 	      		fade: false,
-				prevArrow: $('.left_slide'),
-				nextArrow: $('.right_slide'),
-				slidesToShow: 5,
-				slidesToScroll: 5,
-				swipeToSlide: true,
-				cssEase: 'linear',
-				responsive: [
-					{
-					  breakpoint: 1200,
-					  settings: {
-						slidesToShow: 4,
-					  }
-					},
-					{
-					  breakpoint: 920,
-					  settings: {
-						slidesToShow: 3,
-					  }
-					},
-					{
-					  breakpoint: 768,
-					  settings: {
-						slidesToShow: 2,
-					  }
-					},
-					{
-					  breakpoint: 532,
-					  settings: {
-						slidesToShow: 1,
-					  }
-					}
-				]
+						prevArrow: $('.left_slide'),
+						nextArrow: $('.right_slide'),
+						slidesToShow: 5,
+						slidesToScroll: 5,
+						swipeToSlide: true,
+						cssEase: 'linear',
+						responsive: [
+							{
+							  breakpoint: 1200,
+							  settings: {
+								slidesToShow: 4,
+							  }
+							},
+							{
+							  breakpoint: 920,
+							  settings: {
+								slidesToShow: 3,
+							  }
+							},
+							{
+							  breakpoint: 768,
+							  settings: {
+								slidesToShow: 2,
+							  }
+							},
+							{
+							  breakpoint: 532,
+							  settings: {
+								slidesToShow: 1,
+							  }
+							}
+						]
 	      	});
 	    } else {
 	   		$(".box_content").slick("unslick");
