@@ -1128,6 +1128,38 @@ ul.hidden-links {
 .tovar_radio_block {
 	width: 33.3333%;
 }
+.tabs.tovar_radio {
+	background: transparent;
+	border: none;
+}
+.tovar_radio .tabs-title > a:hover {
+	color: #9b1515;
+}
+.tovar_radio .tabs-title > a {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding-bottom: 12px;
+	padding-left: 0;
+	padding-top: 0;
+	padding-right: 0;
+	cursor: pointer;
+	border-bottom: 2px solid #e7e7e7;
+	background: transparent;
+}
+.tabs-content {
+	border: none;
+}
+.tabs-panel {
+	padding: 0;
+}
+.tovar_radio .tabs-title.is-active > a {
+	border-bottom: 2px solid #9b1515;
+color: #9b1515;
+}
+.tovar_radio .tabs-title {
+	width: 33.3333%;
+}
 .tovar_radio_block label:hover {
 	color: #9b1515;
 }
@@ -1141,7 +1173,7 @@ ul.hidden-links {
 }
 .tovar_radio_icon {
 	padding-right: 10px;
-	height: 11px;
+	height: 20px;
 }
 .tovar_meta {
 	display: flex;
@@ -2193,7 +2225,7 @@ input::placeholder {
 }
 .mobile-ofc li a {
 	display: flex;
-	padding: 16px 8px;
+	padding: 16px;
 	width: 100%;
 }
 .mobile-ofc li a.active {
@@ -2360,8 +2392,20 @@ input::placeholder {
 	.header_bottom_content,
 	.header_top_login,
 	.header_top_menu,
-	.header_top_search {
+	.header_top_search, .newspage_list, .breadcrumb {
 		display: none;
+	}
+	.page_title h1 {
+		font-size: 16px;
+		line-height: normal;
+	}
+	.wrap {
+		background-color: #fff;
+	}
+	.newspage_inner {
+		margin-top: 0;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	.fragment .tovar_desc_title {
 		padding-top: 30px;
@@ -2398,6 +2442,7 @@ input::placeholder {
 	}
 	.tovar_desc_inner {
 		padding-left: 15px;
+		padding-right: 15px;
 	}
 	.tovar_radio_block label {
 		font-size: 12px;
@@ -2523,10 +2568,16 @@ input::placeholder {
 		flex-wrap: wrap;
 	}
 	.tovar_price input[type="submit"] {
-		padding: 5px 15px;
+		padding: 8px 18px;
 	}
 	.tovar_desc_inner h1 {
 		font-size: 22px;
+	}
+	.tovar_radio .accordion-item .tovar_radio_block {
+		color: #555555;
+	}
+	.tovar_radio .accordion-item.is-active .tovar_radio_block {
+		color: #9b1515;
 	}
 	.feedback_container,
 	.fragment_slide_inner .slick-slide {
@@ -2570,6 +2621,10 @@ input::placeholder {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+	.newspage_inner h2 {
+		font-size: 18px;
+		line-height: normal;
+	}
 	.box_title::after {
 		margin-top: 10px;
 	}
@@ -2612,19 +2667,112 @@ input::placeholder {
 		text-align: center;
 	}
 }
+@media (max-width: 638px) {
+	.tovar_radio {
+		flex-direction: column;
+	}
+	.tovar_radio .accordion-title {
+		width: 100%;
+		border: none;
+	}
+	.tovar_radio_block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+		position: relative;
+	}
+	.accordion-content {
+		border: none;
+	}
+}
+
 @media (max-width: 610px) {
-	.tovar_slide_inner, .tovar_sticker {
+	.tovar_slide_inner, .tovar_sticker, .tovar_tag {
 		display: none;
+	}
+	.tovar_radio_block {
+		padding: 18px 20px;
+	}
+	.tovar_radio .accordion-item.is-active, .tovar_radio .accordion-item.is-active .accordion-content, .tovar_radio .accordion-item.is-active .tovar_info {
+		background-color: #F9F9F9;
+	}
+	.tovar_desc_title {
+		font-size: 24px;
+	}
+	.tovar_meta, .tovar_desc_inner {
+		margin-top: 10px;
+	}
+	.tovar_container, .feedback_container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.tovar_img_big_inner {
+		height: auto;
+		padding-left: 0;
+		width: 220px;
+	}
+	.tovar_desc_inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.tovar_radio .accordion-item {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+		border-top: 1px solid #eee;
+	}
+	.tovar_radio .accordion-item:last-child {
+		border-bottom: 1px solid #eee;
 	}
 	.tovar_desc_inner h1 {
 		font-size: 18px;
     line-height: normal;
 		margin-bottom: 0;
 	}
+	.tovar_img_inner {
+		width: auto;
+		margin: 0 auto;
+	}
+	.tovar_radio_block:before {
+		position: absolute;
+    top: 50%;
+    right: 1rem;
+    margin-top: -0.5rem;
+		background-image: url(img/arrow_bot.svg);
+		background-repeat: no-repeat;
+		width: 10px;
+		height: 6px;
+		content: '';
+	}
+	.is-active > .tovar_radio_block::before {
+    background-image: url(img/arrow_top.svg);
+		width: 10px;
+		height: 6px;
+		background-repeat: no-repeat;
+	}
 }
 @media (max-width: 532px) {
 	.main_big {
 		height: 200px;
+	}
+	.tovar_desc_main, .tovar_desc_inner h1, .tovar_autor {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.tovar_radio .accordion-item {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.tovar_main {
+		background-color: #fff;
+	}
+	:last-child > .accordion-content:last-child {
+		border-bottom: 0;
+	}
+	.accordion-content {
+		padding-top: 0;
+	}
+	.tovar_container {
+		padding: 0;
 	}
 	.main_small {
 		height: 100px;
