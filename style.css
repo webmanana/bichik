@@ -1529,6 +1529,12 @@ color: #9b1515;
 	margin-top: 0;
 	margin-bottom: 10px;
 }
+.page_container {
+	padding-top: 15px;
+}
+.newslist_content h2 a {
+	color: #000000;
+}
 .newslist_content h2 a:hover {
 	text-decoration: underline;
 	color: #9b1515;
@@ -1710,6 +1716,7 @@ color: #9b1515;
 .account_content {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	padding: 40px 30px;
 	margin-left: -15px;
 	margin-right: -15px;
@@ -2316,6 +2323,9 @@ input::placeholder {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+	.account_content {
+		margin: 0;
+	}
 	.tovar_slide_inner {
 		left: 0;
 		position: relative;
@@ -2355,8 +2365,8 @@ input::placeholder {
 		padding-bottom: 10px;
 	}
 	.footer_container {
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.footer_block {
 		padding-left: 10px;
@@ -2392,7 +2402,7 @@ input::placeholder {
 	.header_bottom_content,
 	.header_top_login,
 	.header_top_menu,
-	.header_top_search, .newspage_list, .breadcrumb {
+	.header_top_search, .breadcrumb {
 		display: none;
 	}
 	.page_title h1 {
@@ -2404,8 +2414,8 @@ input::placeholder {
 	}
 	.newspage_inner {
 		margin-top: 0;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.fragment .tovar_desc_title {
 		padding-top: 30px;
@@ -2528,9 +2538,45 @@ input::placeholder {
 	.razdel_desc_content span {
 		display: none;
 	}
+	.newspage_list_inner {
+		flex-direction: column;
+	}
+	.newspage_list_block {
+		width: 100%;
+		padding: 0!important;
+		margin-bottom: 20px;
+	}
+	.account_top {
+		border-bottom: none;
+		border-top: 1px solid #eee;
+		padding-top: 0;
+	}
+	.account_top ul li a {
+		padding-bottom: 0;
+		padding-top: 10px;
+	}
+	.account_top ul li a.active {
+    border-bottom: none;
+		border-top: 1px solid #9b1515;
+	}
+	.newspage_list_title {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.newspage_list_img {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.newspage_list {
+		background-color: #F9F9F9;
+		padding-top: 20px;
+	}
 	.tovar_img_big_inner {
 		width: 320px;
 		height: 440px;
+	}
+	.newspage_more {
+		padding-left: 20px;
 	}
 	.tovar_price_content {
 		font-size: 16px;
@@ -2666,6 +2712,10 @@ input::placeholder {
 	.best_price {
 		text-align: center;
 	}
+	.account_block {
+		width: 50%;
+		margin-bottom: 15px;
+	}
 }
 @media (max-width: 638px) {
 	.tovar_radio {
@@ -2701,6 +2751,30 @@ input::placeholder {
 	}
 	.tovar_meta, .tovar_desc_inner {
 		margin-top: 10px;
+	}
+	.newslist_block {
+		flex-direction: column;
+		padding: 20px;
+	}
+	.newslist_content h2 {
+		margin-top: 10px;
+		font-size: 18px;
+		line-height: normal;
+	}
+	.newslist_date {
+		font-size: 14px;
+	}
+	.newslist_inner {
+		margin-top: 20px;
+	}
+	.newslist_img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	}
+	.newslist_content {
+		padding-left: 0;
 	}
 	.tovar_container, .feedback_container {
 		padding-left: 15px;
