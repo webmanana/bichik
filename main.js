@@ -1,3 +1,15 @@
+function a(){
+  if($(window).width()>768){
+		$(".footer_block").removeClass("accordion-item");
+		$(".footer_block_content").removeClass("accordion-content");
+		$(".footer_block_title").removeClass("accordion-title");
+  }else{
+    $(".footer_block").addClass("accordion-item");
+		$(".footer_block_content").addClass("accordion-content");
+		$(".footer_block_title").addClass("accordion-title");
+  }
+};
+$(document).ready(a);
 $('img[src$=".svg"]').each(function() {
 	var $img = jQuery(this);
 	var imgURL = $img.attr('src');
