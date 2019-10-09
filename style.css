@@ -835,60 +835,15 @@ ul.hidden-links {
 	border-radius: 5px;
 }
 /* РАЗДЕЛЫ */
-.razdel1 {
-	background-image: url("./img/razdel1.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.razdel2 {
-	background-image: url("./img/razdel2.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.razdel3 {
-	background-image: url("./img/razdel3.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.razdel4 {
-	background-image: url("./img/razdel4.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.razdel5 {
-	background-image: url("./img/razdel5.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.razdel6 {
-	background-image: url("./img/razdel6.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.razdel7 {
-	background-image: url("./img/razdel7.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.razdel8 {
-	background-image: url("./img/razdel8.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
 .razdel2 .razdel_desc_content span {
 	color: #000;
 }
 .razdel {
 	padding-top: 50px;
 	padding-bottom: 70px;
+	background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .razdel_container {
 	max-width: 1900px;
