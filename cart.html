@@ -236,22 +236,22 @@
 						<div class="cart_total">
 							<span class="cart_total_title">1. Выберите способ оплаты</span>
 							<div class="cart_total_block">
-								<div class="cart_radio_block">
-									<input name="total" id="total_1" type="radio" value="1" checked>
+								<div id="cart_radio_1" class="cart_radio_block">
+									<input name="total" id="total_1" type="radio" value="nalik" checked>
 									<label for="total_1">
 										<span>Наличными</span>
 										<p>Бумажная книга</p>
 									</label>
 								</div>
-								<div class="cart_radio_block">
-									<input name="total" id="total_2" type="radio" value="2">
+								<div id="cart_radio_2" class="cart_radio_block">
+									<input name="total" id="total_2" type="radio" value="bank">
 									<label for="total_2">
 										<span>Банковской картой</span>
 										<p>При получении заказа</p>
 									</label>
 								</div>
-								<div class="cart_radio_block">
-									<input name="total" id="total_3" type="radio" value="3">
+								<div id="cart_radio_3" class="cart_radio_block">
+									<input name="total" id="total_3" type="radio" value="beznal">
 									<label for="total_3">
 										<span>Безналичным расчетом </span>
 										<p>Для юридических лиц</p>
@@ -278,8 +278,9 @@
 								</div>
 								<div class="cart_delivery_radio_inner">
 									<div class="cart_delivery_radio_content">
-										<div class="cart_delivery_block">
-											<input name="delivery" id="delivery_1" type="radio" value="1" checked>
+
+										<div id="cart_delivery_1" class="cart_delivery_block">
+											<input name="delivery" id="delivery_1" type="radio" value="courier" checked>
 											<label for="delivery_1">
 												<div class="cart_delivery_input">
 													<div class="cart_delivery_radius"></div>
@@ -291,8 +292,9 @@
 												<span class="cart_delivery_price">100 ₽</span>
 											</label>
 										</div>
-										<div class="cart_delivery_block">
-											<input name="delivery" id="delivery_2" type="radio" value="2">
+
+										<div id="cart_delivery_2" class="cart_delivery_block">
+											<input name="delivery" id="delivery_2" type="radio" value="sam">
 											<label for="delivery_2">
 												<div class="cart_delivery_input">
 													<div class="cart_delivery_radius"></div>
@@ -304,8 +306,9 @@
 												<span class="cart_delivery_price">0 ₽</span>
 											</label>
 										</div>
-										<div class="cart_delivery_block">
-											<input name="delivery" id="delivery_3" type="radio" value="3">
+
+										<div id="cart_delivery_3" class="cart_delivery_block">
+											<input name="delivery" id="delivery_3" type="radio" value="pochta">
 											<label for="delivery_3">
 												<div class="cart_delivery_input">
 													<div class="cart_delivery_radius"></div>
@@ -317,6 +320,7 @@
 												<span class="cart_delivery_price">100 ₽</span>
 											</label>
 										</div>
+
 									</div>
 								</div>
 								<div class="cart_add_content">
@@ -341,7 +345,7 @@
 						<div class="submit_content">
 							<input type="submit" id="sumbit1" name="" value="">
 							<label for="sumbit1" class="submit_label">
-								Подтвердить заказ на <b>2 630</b> ₽ и получить книги
+								Подтвердить заказ на <b class="total_price">2 630</b> ₽ и получить книги
 							</label>
 						</div>
 					</form>
@@ -416,8 +420,10 @@
 	<script src="main.js"></script>
 
 	<script type="text/javascript">
+
+
 	$(document).ready(function() {
-	    $('.js-example-basic-single').select2();
+	   $('.js-example-basic-single').select2();
 	});
 
 	// Преобразовать текст в атрибут и количество товаров
@@ -430,6 +436,28 @@
 			col = col + 1;
 		});
 		$('.cart_all_col').text(col);
+
+		// доставка
+		$('input:radio[name=delivery]').change(function() {
+	    if (this.value == 'courier') {
+				$('#cart_radio_1').show();
+				$('#cart_radio_3').show();
+				$('.cart_delivery_select').show();
+				$('.cart_add_content').show();
+	    }
+	    else if (this.value == 'sam') {
+				$('#cart_radio_1').show();
+				$('#cart_radio_3').show();
+				$('.cart_delivery_select').hide();
+				$('.cart_add_content').hide();
+	    }
+			else if (this.value == 'pochta') {
+				$('#cart_radio_1').hide();
+				$('#cart_radio_3').hide();
+				$('.cart_delivery_select').show();
+				$('.cart_add_content').show();
+	    }
+		});
 	});
 
 	// Количество товара * на цену
@@ -446,6 +474,7 @@
 		$('.single_total_number').each(function() {
 			var single = $(this).text();
 			total = total + parseInt(single);
+			$('.total_price').text(total);
 			$('.cart_tovar_top_price').text(total);
 		});
 	}
@@ -505,7 +534,7 @@
 	$('.tovar_meta input').on('change', function() {
 		var radioValue = $("input[name='tovar']:checked").val();
         if(radioValue){
-			$(".tovar_value").text(radioValue);
+					$(".tovar_value").text(radioValue);
         }
 	});
 	</script>
