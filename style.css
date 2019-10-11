@@ -154,7 +154,7 @@ ul.hidden-links {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	width: 500px;
+	width: auto;
 }
 .header_top_login {
 	display: flex;
@@ -224,6 +224,13 @@ ul.hidden-links {
 .header_top_cart a:hover {
 	text-decoration: underline;
 	color: #9b1515;
+}
+.catalog_menu_title {
+	font-size: 16px;
+	line-height: normal;
+	color: #9B1515;
+	margin-bottom: 8px;
+	display: flex;
 }
 .cart_inner {
 	display: flex;
@@ -312,6 +319,49 @@ ul.hidden-links {
 }
 .stock_3 span {
 	color: #1a81e0;
+}
+.catalog_menu_inner {
+	position: relative;
+}
+.catalog_menu_inner .dropdown-pane.is-open {
+	width: 100%;
+	left: 0!important;
+	top: 0!important;
+	border-top: 2px solid #9B1515;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+	padding: 20px 15px;
+}
+.header_bottom_menu ul li a.hover {
+	position: relative;
+}
+.header_bottom_menu ul li a.hover::after {
+  content: '';
+  display: flex;
+  background: url(img/catalog_arrow.png);
+  width: 14px;
+  height: 7px;
+  position: absolute;
+  bottom: -24px;
+  left: 38%;
+}
+.catalog_menu_block li {
+	margin-bottom: 6px;
+}
+.catalog_menu_block li a {
+	color: #222;
+	font-size: 14px;
+}
+.catalog_menu_content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.catalog_menu_block {
+	width: 15%;
+	padding-right: 15px;
+}
+.catalog_menu_block:last-child {
+	padding-right: 0;
 }
 /* main slider */
 .main_inner {
@@ -1968,7 +2018,7 @@ input::placeholder {
 }
 .cart_total_title {
 	font-style: normal;
-	font-weight: normal;
+	font-weight: bold;
 	font-size: 20px;
 	line-height: 24px;
 	display: flex;
@@ -2040,7 +2090,26 @@ input::placeholder {
 .cart_delivery_select {
 	display: flex;
 	flex-direction: row;
-	padding: 30px 30px 0;
+	padding: 0 30px 30px 30px;
+}
+.cart_sam {
+	flex-wrap: wrap;
+}
+.cart_sam .cart_delivery_desc {
+	width: 100%!important;
+	padding-bottom:
+}
+.cart_sam .cart_delivery_desc span {
+	padding-top: 0;
+	padding-bottom: 15px;
+	font-size: 16px;
+}
+.cart_sam .cart_delivery_select_block {
+	width: 100%!important;
+	flex: auto!important;
+}
+.cart_sam .cart_delivery_select_block .select2-container {
+	width: 100%!important;
 }
 .cart_delivery_select_text {
 	font-style: normal;
@@ -2059,6 +2128,7 @@ input::placeholder {
 .cart_delivery_desc span {
 	padding-top: 15px;
 	display: flex;
+	font-size: 16px;
 }
 .cart_delivery {
 	background-color: #fff;

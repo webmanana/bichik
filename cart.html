@@ -262,20 +262,7 @@
 						<div class="cart_delivery">
 							<span class="cart_total_title">2. Куда доставить заказ</span>
 							<div class="cart_delivery_inner">
-								<div class="cart_delivery_select">
-									<div class="cart_delivery_desc">
-										<span>Город, населенный пункт</span>
-									</div>
-									<div class="cart_delivery_select_block">
-										<select class="js-example-basic-single" name="state">
-										    <option value="YK">Якутск</option>
-										    <option value="PO">Покровск</option>
-										</select>
-										<div class="cart_delivery_select_text">
-											Например, <span>Якутск</span>, <span>Покровск</span>
-										</div>
-									</div>
-								</div>
+
 								<div class="cart_delivery_radio_inner">
 									<div class="cart_delivery_radio_content">
 
@@ -321,6 +308,31 @@
 											</label>
 										</div>
 
+									</div>
+								</div>
+								<div class="cart_delivery_select">
+									<div class="cart_delivery_desc">
+										<span>Город, населенный пункт</span>
+									</div>
+									<div class="cart_delivery_select_block">
+										<select class="js-example-basic-single" name="state">
+										    <option value="YK">Якутск</option>
+										    <option value="PO">Покровск</option>
+										</select>
+										<div class="cart_delivery_select_text">
+											Например, <span>Якутск</span>, <span>Покровск</span>
+										</div>
+									</div>
+								</div>
+								<div class="cart_delivery_select cart_sam" style="display:none;">
+									<div class="cart_delivery_desc">
+										<span>Выберите пункт самовывоза</span>
+									</div>
+									<div class="cart_delivery_select_block">
+										<select class="js-example-basic-single" name="state">
+										    <option value="YK">ул. Курашова, 34</option>
+										    <option value="PO">ул. Ленина, 34</option>
+										</select>
 									</div>
 								</div>
 								<div class="cart_add_content">
@@ -444,18 +456,22 @@
 				$('#cart_radio_3').show();
 				$('.cart_delivery_select').show();
 				$('.cart_add_content').show();
+				$('.cart_sam').hide();
 	    }
 	    else if (this.value == 'sam') {
 				$('#cart_radio_1').show();
 				$('#cart_radio_3').show();
 				$('.cart_delivery_select').hide();
 				$('.cart_add_content').hide();
+				$('.cart_sam').show();
 	    }
 			else if (this.value == 'pochta') {
 				$('#cart_radio_1').hide();
 				$('#cart_radio_3').hide();
 				$('.cart_delivery_select').show();
 				$('.cart_add_content').show();
+				$('.cart_sam').hide();
+				$("#total_2").prop("checked", true);
 	    }
 		});
 	});

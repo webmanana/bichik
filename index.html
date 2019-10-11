@@ -13,7 +13,7 @@
 		<div class="wrap">
 			<div class="header_inner">
 				<div class="mobile_burger">
-					<a href="#" data-toggle="offCanvas"><img src="img/burger.svg" alt=""></a>
+					<a href="#" data-toggle="catalog_menu"><img src="img/burger.svg" alt=""></a>
 				</div>
 				<div class="header_logo">
 					<a href="#">
@@ -99,7 +99,7 @@
 						<div class="header_bottom_menu">
 							<ul>
 								<li><a href="#"><img src="img/burger.svg" alt=""></a></li>
-								<li><a href="#">Книги</a></li>
+								<li><a href="#" data-toggle="catalog_menu">Книги</a></li>
 								<li><a href="#">Учебные издания</a></li>
 								<li><a href="#">Игрушки и игры</a></li>
 								<li><a href="#">Подарки, сувениры и букбоксы</a></li>
@@ -129,6 +129,77 @@
 				</div>
 			</div>
 
+			<!-- dropdown menu -->
+			<div class="catalog_menu_inner">
+				<div class="dropdown-pane catalog_menu" id="catalog_menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
+					<ul class="catalog_menu_content vertical menu drilldown" data-responsive-menu="small-only-drilldown medium-only-drilldown">
+						<li class="catalog_menu_block">
+							<a href="#" class="catalog_menu_title">Детские издания</a>
+							<ul class="menu vertical nested">
+								<li><a href="#">В помощь родителям</a></li>
+								<li><a href="#">Читаем детям</a></li>
+								<li><a href="#">Моя первая книга</a></li>
+								<li><a href="#">Внеклассное чтение</a></li>
+								<li><a href="#">Развивашки</a></li>
+								<li><a href="#">Детские книги</a></li>
+								<li><a href="#">Растем вместе</a></li>
+								<li><a href="#">Дошколята</a></li>
+							</ul>
+						</li>
+						<li class="catalog_menu_block">
+							<a href="#" class="catalog_menu_title">Для досуга и творчества</a>
+							<ul>
+								<li><a href="#">Кулинария</a></li>
+								<li><a href="#">Рукоделие</a></li>
+								<li><a href="#">Ремесла</a></li>
+								<li><a href="#">Охота и рыбалка</a></li>
+								<li><a href="#">Полезные советы</a></li>
+								<li><a href="#">Сад и огород</a></li>
+							</ul>
+						</li>
+						<li class="catalog_menu_block">
+							<a href="#" class="catalog_menu_title">Художественная литература</a>
+							<ul>
+								<li><a href="#">Классика</a></li>
+								<li><a href="#">Проза</a></li>
+								<li><a href="#">Поэзия</a></li>
+								<li><a href="#">Драма</a></li>
+								<li><a href="#">Роман</a></li>
+								<li><a href="#">Детектив</a></li>
+								<li><a href="#">Мистика</a></li>
+								<li><a href="#">Фэнтези</a></li>
+								<li><a href="#">Книги про любовь</a></li>
+								<li><a href="#">Современная проза</a></li>
+							</ul>
+						</li>
+						<li class="catalog_menu_block">
+							<a href="#" class="catalog_menu_title">Краеведческая литература</a>
+							<ul>
+								<li><a href="#">История родного края</a></li>
+								<li><a href="#">Великая Отечественная война</a></li>
+								<li><a href="#">Выдающиеся личности</a></li>
+								<li><a href="#">Подарочные фотоальбомы</a></li>
+								<li><a href="#">Энциклопедии и справочники</a></li>
+								<li><a href="#">Увлекательное краеведение</a></li>
+							</ul>
+						</li>
+						<li class="catalog_menu_block">
+							<a href="#" class="catalog_menu_title">Нехудожественная литература</a>
+							<ul>
+								<li><a href="#">Нон-фикшн</a></li>
+								<li><a href="#">Медицина и здоровье</a></li>
+								<li><a href="#">Спорт</a></li>
+								<li><a href="#">Психология</a></li>
+								<li><a href="#">Саморазвитие</a></li>
+								<li><a href="#">Мемуары и биографии</a></li>
+								<li><a href="#">Искусство и культура</a></li>
+								<li><a href="#">Здоровье и красота</a></li>
+								<li><a href="#">Эзотерика</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
 			<div class="main_inner">
 				<div class="main_big">
 
@@ -864,20 +935,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="off-canvas-wrapper">
-			<div class="off-canvas position-left mobile_canvas" id="offCanvas" data-off-canvas>
-				<ul class="mobile-ofc vertical menu">
-					<li><a href="#" class="">Каталог</a></li>
-					<li><a href="#" class="">Личный кабинет</a></li>
-					<li><a href="#" class="">Издательствот</a></li>
-					<li><a href="#" class="active">Услуги</a></li>
-					<li><a href="#" class="">Магазины</a></li>
-					<li><a href="#" class="">Новости и события</a></li>
-					<li><a href="#" class="">Оплата и доставка</a></li>
-					<li><a href="#" class="">Контакты</a></li>
-				</ul>
-			</div>
-		</div>
 	</body>
 
 	<script src="vendor/foundation/js/vendor/jquery.js"></script>
@@ -931,8 +988,8 @@
 
 		if ($(window).width() < 768) {
 			$('.box_best_inner').slick({
-	      		arrows: false,
-	      		fade: false,
+    		arrows: false,
+    		fade: false,
 				prevArrow: $('.left_slide'),
 				nextArrow: $('.right_slide'),
 				slidesToShow: 2,
@@ -953,10 +1010,11 @@
 					  }
 					}
 				]
-	      	});
+    	});
 		} else {
- 	   		$(".box_best_inner").slick("unslick");
- 	    }
+
+   		$(".box_best_inner").slick("unslick");
+    }
 	});
 	</script>
 </html>
