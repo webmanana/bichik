@@ -356,14 +356,60 @@ ul.hidden-links {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-.catalog_menu_block {
-	width: 15%;
-	padding-right: 15px;
-}
 .catalog_menu_block:last-child {
 	padding-right: 0;
 }
 /* main slider */
+.is-drilldown{overflow:visible !important}
+.mobile_menu {
+	display: flex;
+	flex-direction: column;
+}
+.is-drilldown {
+    min-height: 100%!important;
+    max-width: 100%!important;
+}
+.mobile_menu li:first-child > a {
+	border-top: 1px solid #eee;
+}
+.drilldown .is-drilldown-submenu-parent > a::after {
+	background-image: url(img/drill_right.png);
+  width: 6px;
+  height: 10px;
+  border: none;
+  background-repeat: no-repeat;
+}
+.js-drilldown-back a {
+	background-color: #F8F8F8;
+}
+.drilldown .js-drilldown-back > a::before {
+	background-image: url(img/drill_left.png);
+	width: 6px;
+  height: 10px;
+  border: none;
+  background-repeat: no-repeat;
+	margin-top: 7px;
+}
+.mobile_menu li {
+	width: 100%;
+}
+.mobile_menu li a {
+	width: 100%;
+	display: flex;
+	border-bottom: 1px solid #eee;
+	outline: none;
+	cursor: pointer;
+}
+.mobile_menu_inner {
+	width: 100%;
+	border: none;
+	overflow: hidden;
+	padding: 0;
+}
+.catalog_menu_block {
+	width: 15%;
+	margin-right: 15px;
+}
 .main_inner {
 	height: 500px;
 	display: flex;
@@ -2344,6 +2390,10 @@ input::placeholder {
 	.header_top_menu ul li {
 		padding-right: 15px;
 	}
+	.catalog_menu_block {
+		width: 18%;
+		margin-right: 15px;
+	}
 	.best_img {
 		width: 40%;
 	}
@@ -2477,6 +2527,10 @@ input::placeholder {
 	}
 	.cart_total_block {
 		margin: 0;
+	}
+	.catalog_menu_block {
+    width: 18%;
+    margin-right: 10px;
 	}
 }
 @media (max-width: 920px) {
