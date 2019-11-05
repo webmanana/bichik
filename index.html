@@ -34,8 +34,13 @@
 								<li><a href="#">Оплата и доставка</a></li>
 								<li><a href="#">Контакты</a></li>
 							</ul>
+<<<<<<< HEAD
+							<button class="hidden">...</button>
+							<ul class='hidden-links hidden'></ul>
+=======
 							<button class="hidden" data-toggle="dropdown">Еще...</button>
 							<ul class='hidden-links hidden dropdown-pane dropdown_menu'  id="dropdown" data-dropdown data-auto-focus="true" data-close-on-click="true" data-close-on-click-inside="true"></ul>
+>>>>>>> 3081c3b042be83f59f6786e15da64354246cf6f5
 						</div>
 						<div class="header_top_url">
 							<div class="header_top_login">
@@ -1018,6 +1023,29 @@
 	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script src="main.js"></script>
 	<script type="text/javascript">
+<<<<<<< HEAD
+	$('.box_content').slick({
+		arrows: false,
+		fade: false,
+		responsive: [
+		    {
+		      breakpoint: 1500,
+		      settings: "unslick"
+		    },
+			{
+			  breakpoint: 1350,
+			  settings: {
+				prevArrow: $('.left_slide'),
+				nextArrow: $('.right_slide'),
+				slidesToShow: 5,
+				slidesToScroll: 1,
+			  }
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+=======
 	$(window).on('load resize', function() {
 	    if ($(window).width() < 1400) {
 		    $('.box_content').slick({
@@ -1089,6 +1117,7 @@
 
    		$(".box_best_inner").slick("unslick");
     }
+>>>>>>> 3081c3b042be83f59f6786e15da64354246cf6f5
 	});
 	</script>
 </html>
