@@ -1911,6 +1911,17 @@ input::placeholder {
 	margin-bottom: 100px;
 	margin-top: 40px;
 }
+.cart_tovar_delete {
+	width: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.cart_tovar_delete_icon {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
 .cart_tovar_top {
 	font-style: normal;
 	font-weight: normal;
@@ -1929,6 +1940,7 @@ input::placeholder {
 	margin-bottom: 20px;
 	display: flex;
 	flex-direction: row;
+	position: relative;
 }
 .cart_tovar_img {
 	width: 82px;
@@ -2695,18 +2707,27 @@ input::placeholder {
 		display: none;
 	}
 	.footer_block_title.accordion-title::before {
-    position: absolute;
-    content: ''!important;
-    background-image: url(img/footer_arrow_right.svg);
-    background-repeat: no-repeat;
-    width: 6px;
-    height: 10px;
-}
+  position: absolute;
+  content: ''!important;
+  background-image: url(img/footer_arrow_right.svg);
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 10px;
+	}
+.cart_tovar_delete {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 3px;
+  right: 32px;
+	}
 .is-active > .footer_block_title.accordion-title::before {
-    content: ''!important;
-		background-image: url(img/footer_arrow_bot.svg);
-		width: 10px;
-		height: 6px;
+  content: ''!important;
+	background-image: url(img/footer_arrow_bot.svg);
+	width: 10px;
+	height: 6px;
 }
 	.footer_top {
 		padding-top: 0;
@@ -3170,6 +3191,9 @@ input::placeholder {
 	.tovar_desc_main, .tovar_desc_inner h1, .tovar_autor {
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+	.cart_tovar_delete {
+    right: -10px;
 	}
 	.tovar_radio .accordion-item {
 		padding-left: 0;
