@@ -526,7 +526,9 @@
 		   // Get its current value
 		   var currentVal = parseInt($('input[name='+fieldName+']').val());
 
-
+			if (currentVal == 0) {
+				delete();
+			}
 		   if (currentVal == 2) {
 			   $(".minus").addClass("disabled");
 		   }
