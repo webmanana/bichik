@@ -12,6 +12,9 @@
 	<body>
 		<div class="wrap">
 			<div class="header_inner">
+				<div class="mobile_burger">
+					<a href="#" data-toggle="offCanvas"><img src="img/burger.svg" alt=""></a>
+				</div>
 				<div class="header_logo">
 					<a href="#">
 						<div class="header_logo_img">
@@ -21,8 +24,8 @@
 				</div>
 				<div class="header_menu_inner">
 					<div class="header_top_content">
-						<div class="header_top_menu">
-							<ul>
+						<div class="header_top_menu topmenu greedy">
+							<ul class="links">
 								<li><a href="#">Издательство</a></li>
 								<li><a href="#">Услуги</a></li>
 								<li><a href="#">Магазины</a></li>
@@ -30,6 +33,8 @@
 								<li><a href="#">Оплата и доставка</a></li>
 								<li><a href="#">Контакты</a></li>
 							</ul>
+							<button class="hidden" data-toggle="dropdown">Еще...</button>
+							<ul class='hidden-links hidden dropdown-pane dropdown_menu'  id="dropdown" data-dropdown data-auto-focus="true" data-close-on-click="true" data-close-on-click-inside="true"></ul>
 						</div>
 						<div class="header_top_url">
 							<div class="header_top_login">
@@ -199,42 +204,48 @@
 			<div class="footer">
 				<div class="footer_top">
 					<div class="footer_container">
-						<div class="footer_inner">
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<ul>
-									<li><a href="#">Книги</a></li>
-									<li><a href="#">Учебные издания</a></li>
-									<li><a href="#">Игрушки и игры</a></li>
-									<li><a href="#">Подарки, сувениры и букбоксы</a></li>
-								</ul>
-							</div>
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<ul>
-									<li><a href="#">О нас</a></li>
-									<li><a href="#">Услуги</a></li>
-									<li><a href="#">Магазины</a></li>
-									<li><a href="#">Новости и события</a></li>
-									<li><a href="#">Оплата и доставка</a></li>
-									<li><a href="#">Контакты</a></li>
-								</ul>
-							</div>
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<div class="footer_text">
-									<p>Акционерное Общество "Национальная издательская компания "Бичик" им. С.А. Новгородова"</p>
-									<p>г. Якутск, ул. Курашова, 30/1</p>
-									<p>Телефон: 8-800-250-13-38</p>
-									<p>Электронная почта: <a href="mailto:book@bichik.ru">book@bichik.ru</a></p>
-								</div>
-								<div class="footer_soc">
-									<p>Мы в социальных сетях</p>
+						<div class="footer_inner accordion" data-responsive-accordion-tabs="accordion small-accordion">
+							<div class="footer_block" data-accordion-item>
+								<a class="footer_block_title">Каталог товаров</a>
+								<div class="footer_block_content" data-tab-content>
 									<ul>
-										<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
-										<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
-										<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+										<li><a href="#">Книги</a></li>
+										<li><a href="#">Учебные издания</a></li>
+										<li><a href="#">Игрушки и игры</a></li>
+										<li><a href="#">Подарки, сувениры и букбоксы</a></li>
 									</ul>
+								</div>
+							</div>
+							<div class="footer_block" data-accordion-item>
+								<a class="footer_block_title">Издательство</a>
+								<div class="footer_block_content" data-tab-content>
+									<ul>
+										<li><a href="#">О нас</a></li>
+										<li><a href="#">Услуги</a></li>
+										<li><a href="#">Магазины</a></li>
+										<li><a href="#">Новости и события</a></li>
+										<li><a href="#">Оплата и доставка</a></li>
+										<li><a href="#">Контакты</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer_block is-active" data-accordion-item>
+								<a class="footer_block_title">Контакты</a>
+								<div class="footer_block_content" data-tab-content>
+									<div class="footer_text">
+										<p>Акционерное Общество "Национальная издательская компания "Бичик" им. С.А. Новгородова"</p>
+										<p>г. Якутск, ул. Курашова, 30/1</p>
+										<p>Телефон: 8-800-250-13-38</p>
+										<p>Электронная почта: <a href="mailto:book@bichik.ru">book@bichik.ru</a></p>
+									</div>
+									<div class="footer_soc">
+										<p>Мы в социальных сетях</p>
+										<ul>
+											<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+											<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+											<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -245,6 +256,20 @@
 						<span>2019 НКИ "Бичик"</span>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="off-canvas-wrapper">
+			<div class="off-canvas position-left mobile_canvas" id="offCanvas" data-off-canvas>
+				<ul class="mobile-ofc vertical menu">
+					<li><a href="#" class="">Каталог</a></li>
+					<li><a href="#" class="">Личный кабинет</a></li>
+					<li><a href="#" class="">Издательствот</a></li>
+					<li><a href="#" class="active">Услуги</a></li>
+					<li><a href="#" class="">Магазины</a></li>
+					<li><a href="#" class="">Новости и события</a></li>
+					<li><a href="#" class="">Оплата и доставка</a></li>
+					<li><a href="#" class="">Контакты</a></li>
+				</ul>
 			</div>
 		</div>
 	</body>

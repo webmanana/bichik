@@ -13,6 +13,9 @@
 	<body>
 		<div class="wrap">
 			<div class="header_inner">
+				<div class="mobile_burger">
+					<a href="#" data-toggle="offCanvas"><img src="img/burger.svg" alt=""></a>
+				</div>
 				<div class="header_logo">
 					<a href="#">
 						<div class="header_logo_img">
@@ -22,8 +25,8 @@
 				</div>
 				<div class="header_menu_inner">
 					<div class="header_top_content">
-						<div class="header_top_menu">
-							<ul>
+						<div class="header_top_menu topmenu greedy">
+							<ul class="links">
 								<li><a href="#">Издательство</a></li>
 								<li><a href="#">Услуги</a></li>
 								<li><a href="#">Магазины</a></li>
@@ -31,6 +34,8 @@
 								<li><a href="#">Оплата и доставка</a></li>
 								<li><a href="#">Контакты</a></li>
 							</ul>
+							<button class="hidden" data-toggle="dropdown">Еще...</button>
+							<ul class='hidden-links hidden dropdown-pane dropdown_menu'  id="dropdown" data-dropdown data-auto-focus="true" data-close-on-click="true" data-close-on-click-inside="true"></ul>
 						</div>
 						<div class="header_top_url">
 							<div class="header_top_login">
@@ -231,22 +236,22 @@
 						<div class="cart_total">
 							<span class="cart_total_title">1. Выберите способ оплаты</span>
 							<div class="cart_total_block">
-								<div class="cart_radio_block">
-									<input name="total" id="total_1" type="radio" value="1" checked>
+								<div id="cart_radio_1" class="cart_radio_block">
+									<input name="total" id="total_1" type="radio" value="nalik" checked>
 									<label for="total_1">
 										<span>Наличными</span>
 										<p>Бумажная книга</p>
 									</label>
 								</div>
-								<div class="cart_radio_block">
-									<input name="total" id="total_2" type="radio" value="2">
+								<div id="cart_radio_2" class="cart_radio_block">
+									<input name="total" id="total_2" type="radio" value="bank">
 									<label for="total_2">
 										<span>Банковской картой</span>
 										<p>При получении заказа</p>
 									</label>
 								</div>
-								<div class="cart_radio_block">
-									<input name="total" id="total_3" type="radio" value="3">
+								<div id="cart_radio_3" class="cart_radio_block">
+									<input name="total" id="total_3" type="radio" value="beznal">
 									<label for="total_3">
 										<span>Безналичным расчетом </span>
 										<p>Для юридических лиц</p>
@@ -257,6 +262,54 @@
 						<div class="cart_delivery">
 							<span class="cart_total_title">2. Куда доставить заказ</span>
 							<div class="cart_delivery_inner">
+
+								<div class="cart_delivery_radio_inner">
+									<div class="cart_delivery_radio_content">
+
+										<div id="cart_delivery_1" class="cart_delivery_block">
+											<input name="delivery" id="delivery_1" type="radio" value="courier" checked>
+											<label for="delivery_1">
+												<div class="cart_delivery_input">
+													<div class="cart_delivery_radius"></div>
+												</div>
+												<div class="cart_delivery_input_text">
+													<span>Курьером до двери</span>
+													<p>Доставка курьером и в пункт самовывоза доступна только при заказе товаров на 1 500 ₽.  Добавьте товаров еще на 188 ₽</p>
+												</div>
+												<span class="cart_delivery_price">100 ₽</span>
+											</label>
+										</div>
+
+										<div id="cart_delivery_2" class="cart_delivery_block">
+											<input name="delivery" id="delivery_2" type="radio" value="sam">
+											<label for="delivery_2">
+												<div class="cart_delivery_input">
+													<div class="cart_delivery_radius"></div>
+												</div>
+												<div class="cart_delivery_input_text">
+													<span>В пункт самовывоза</span>
+													<p>от 2 до 4 дней</p>
+												</div>
+												<span class="cart_delivery_price">0 ₽</span>
+											</label>
+										</div>
+
+										<div id="cart_delivery_3" class="cart_delivery_block">
+											<input name="delivery" id="delivery_3" type="radio" value="pochta">
+											<label for="delivery_3">
+												<div class="cart_delivery_input">
+													<div class="cart_delivery_radius"></div>
+												</div>
+												<div class="cart_delivery_input_text">
+													<span>Почтой России</span>
+													<p>Почта России работает по предоплате. Смените способ оплаты.</p>
+												</div>
+												<span class="cart_delivery_price">100 ₽</span>
+											</label>
+										</div>
+
+									</div>
+								</div>
 								<div class="cart_delivery_select">
 									<div class="cart_delivery_desc">
 										<span>Город, населенный пункт</span>
@@ -271,47 +324,32 @@
 										</div>
 									</div>
 								</div>
-								<div class="cart_delivery_radio_inner">
-									<div class="cart_delivery_radio_content">
-										<div class="cart_delivery_block">
-											<input name="delivery" id="delivery_1" type="radio" value="1" checked>
-											<label for="delivery_1">
-												<div class="cart_delivery_input">
-													<div class="cart_delivery_radius"></div>
-												</div>
-												<div class="cart_delivery_input_text">
-													<span>Курьером до двери</span>
-													<p>Доставка курьером и в пункт самовывоза доступна только при заказе товаров на 1 500 ₽.  Добавьте товаров еще на 188 ₽</p>
-												</div>
-												<span class="cart_delivery_price">100 ₽</span>
-											</label>
-										</div>
-										<div class="cart_delivery_block">
-											<input name="delivery" id="delivery_2" type="radio" value="2">
-											<label for="delivery_2">
-												<div class="cart_delivery_input">
-													<div class="cart_delivery_radius"></div>
-												</div>
-												<div class="cart_delivery_input_text">
-													<span>В пункт самовывоза</span>
-													<p>от 2 до 4 дней</p>
-												</div>
-												<span class="cart_delivery_price">0 ₽</span>
-											</label>
-										</div>
-										<div class="cart_delivery_block">
-											<input name="delivery" id="delivery_3" type="radio" value="3">
-											<label for="delivery_3">
-												<div class="cart_delivery_input">
-													<div class="cart_delivery_radius"></div>
-												</div>
-												<div class="cart_delivery_input_text">
-													<span>Почтой России</span>
-													<p>Почта России работает по предоплате. Смените способ оплаты.</p>
-												</div>
-												<span class="cart_delivery_price">100 ₽</span>
-											</label>
-										</div>
+								<div class="cart_delivery_select cart_sam" style="display:none;">
+									<div class="cart_delivery_desc">
+										<span>Выберите пункт самовывоза</span>
+									</div>
+									<div class="cart_delivery_select_block">
+										<select class="js-example-basic-single" name="state">
+										    <option value="YK">ул. Курашова, 34</option>
+										    <option value="PO">ул. Ленина, 34</option>
+										</select>
+									</div>
+								</div>
+								<div class="cart_add_content">
+									<div class="cart_add_block">
+										<input type="text" name="" value="" placeholder="Улица">
+									</div>
+									<div class="cart_add_block">
+										<input type="text" name="" value="" placeholder="Дом">
+									</div>
+									<div class="cart_add_block">
+										<input type="text" name="" value="" placeholder="Подъезд">
+									</div>
+									<div class="cart_add_block">
+										<input type="text" name="" value="" placeholder="Этаж">
+									</div>
+									<div class="cart_add_block">
+										<input type="text" name="" value="" placeholder="Квартира">
 									</div>
 								</div>
 							</div>
@@ -319,7 +357,7 @@
 						<div class="submit_content">
 							<input type="submit" id="sumbit1" name="" value="">
 							<label for="sumbit1" class="submit_label">
-								Подтвердить заказ на <b>2 630</b> ₽ и получить книги
+								Подтвердить заказ на <b class="total_price">2 630</b> ₽ и получить книги
 							</label>
 						</div>
 					</form>
@@ -329,42 +367,48 @@
 			<div class="footer">
 				<div class="footer_top">
 					<div class="footer_container">
-						<div class="footer_inner">
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<ul>
-									<li><a href="#">Книги</a></li>
-									<li><a href="#">Учебные издания</a></li>
-									<li><a href="#">Игрушки и игры</a></li>
-									<li><a href="#">Подарки, сувениры и букбоксы</a></li>
-								</ul>
-							</div>
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<ul>
-									<li><a href="#">О нас</a></li>
-									<li><a href="#">Услуги</a></li>
-									<li><a href="#">Магазины</a></li>
-									<li><a href="#">Новости и события</a></li>
-									<li><a href="#">Оплата и доставка</a></li>
-									<li><a href="#">Контакты</a></li>
-								</ul>
-							</div>
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<div class="footer_text">
-									<p>Акционерное Общество "Национальная издательская компания "Бичик" им. С.А. Новгородова"</p>
-									<p>г. Якутск, ул. Курашова, 30/1</p>
-									<p>Телефон: 8-800-250-13-38</p>
-									<p>Электронная почта: <a href="mailto:book@bichik.ru">book@bichik.ru</a></p>
-								</div>
-								<div class="footer_soc">
-									<p>Мы в социальных сетях</p>
+						<div class="footer_inner accordion" data-responsive-accordion-tabs="accordion small-accordion">
+							<div class="footer_block" data-accordion-item>
+								<a class="footer_block_title">Каталог товаров</a>
+								<div class="footer_block_content" data-tab-content>
 									<ul>
-										<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
-										<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
-										<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+										<li><a href="#">Книги</a></li>
+										<li><a href="#">Учебные издания</a></li>
+										<li><a href="#">Игрушки и игры</a></li>
+										<li><a href="#">Подарки, сувениры и букбоксы</a></li>
 									</ul>
+								</div>
+							</div>
+							<div class="footer_block" data-accordion-item>
+								<a class="footer_block_title">Издательство</a>
+								<div class="footer_block_content" data-tab-content>
+									<ul>
+										<li><a href="#">О нас</a></li>
+										<li><a href="#">Услуги</a></li>
+										<li><a href="#">Магазины</a></li>
+										<li><a href="#">Новости и события</a></li>
+										<li><a href="#">Оплата и доставка</a></li>
+										<li><a href="#">Контакты</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer_block is-active" data-accordion-item>
+								<a class="footer_block_title">Контакты</a>
+								<div class="footer_block_content" data-tab-content>
+									<div class="footer_text">
+										<p>Акционерное Общество "Национальная издательская компания "Бичик" им. С.А. Новгородова"</p>
+										<p>г. Якутск, ул. Курашова, 30/1</p>
+										<p>Телефон: 8-800-250-13-38</p>
+										<p>Электронная почта: <a href="mailto:book@bichik.ru">book@bichik.ru</a></p>
+									</div>
+									<div class="footer_soc">
+										<p>Мы в социальных сетях</p>
+										<ul>
+											<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+											<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+											<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -388,8 +432,10 @@
 	<script src="main.js"></script>
 
 	<script type="text/javascript">
+
+
 	$(document).ready(function() {
-	    $('.js-example-basic-single').select2();
+	   $('.js-example-basic-single').select2();
 	});
 
 	// Преобразовать текст в атрибут и количество товаров
@@ -402,6 +448,32 @@
 			col = col + 1;
 		});
 		$('.cart_all_col').text(col);
+
+		// доставка
+		$('input:radio[name=delivery]').change(function() {
+	    if (this.value == 'courier') {
+				$('#cart_radio_1').show();
+				$('#cart_radio_3').show();
+				$('.cart_delivery_select').show();
+				$('.cart_add_content').show();
+				$('.cart_sam').hide();
+	    }
+	    else if (this.value == 'sam') {
+				$('#cart_radio_1').show();
+				$('#cart_radio_3').show();
+				$('.cart_delivery_select').hide();
+				$('.cart_add_content').hide();
+				$('.cart_sam').show();
+	    }
+			else if (this.value == 'pochta') {
+				$('#cart_radio_1').hide();
+				$('#cart_radio_3').hide();
+				$('.cart_delivery_select').show();
+				$('.cart_add_content').show();
+				$('.cart_sam').hide();
+				$("#total_2").prop("checked", true);
+	    }
+		});
 	});
 
 	// Количество товара * на цену
@@ -418,6 +490,7 @@
 		$('.single_total_number').each(function() {
 			var single = $(this).text();
 			total = total + parseInt(single);
+			$('.total_price').text(total);
 			$('.cart_tovar_top_price').text(total);
 		});
 	}
@@ -477,7 +550,7 @@
 	$('.tovar_meta input').on('change', function() {
 		var radioValue = $("input[name='tovar']:checked").val();
         if(radioValue){
-			$(".tovar_value").text(radioValue);
+					$(".tovar_value").text(radioValue);
         }
 	});
 	</script>

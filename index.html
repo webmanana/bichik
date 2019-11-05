@@ -12,6 +12,9 @@
 	<body>
 		<div class="wrap">
 			<div class="header_inner">
+				<div class="mobile_burger">
+					<a href="#" data-toggle="mobile_menu"><img src="img/burger.svg" alt=""></a>
+				</div>
 				<div class="header_logo">
 					<a href="#">
 						<div class="header_logo_img">
@@ -30,8 +33,13 @@
 								<li><a href="#">Оплата и доставка</a></li>
 								<li><a href="#">Контакты</a></li>
 							</ul>
+<<<<<<< HEAD
 							<button class="hidden">...</button>
 							<ul class='hidden-links hidden'></ul>
+=======
+							<button class="hidden" data-toggle="dropdown">Еще...</button>
+							<ul class='hidden-links hidden dropdown-pane dropdown_menu'  id="dropdown" data-dropdown data-auto-focus="true" data-close-on-click="true" data-close-on-click-inside="true"></ul>
+>>>>>>> 3081c3b042be83f59f6786e15da64354246cf6f5
 						</div>
 						<div class="header_top_url">
 							<div class="header_top_login">
@@ -96,7 +104,7 @@
 						<div class="header_bottom_menu">
 							<ul>
 								<li><a href="#"><img src="img/burger.svg" alt=""></a></li>
-								<li><a href="#">Книги</a></li>
+								<li><a href="#" data-toggle="catalog_menu">Книги</a></li>
 								<li><a href="#">Учебные издания</a></li>
 								<li><a href="#">Игрушки и игры</a></li>
 								<li><a href="#">Подарки, сувениры и букбоксы</a></li>
@@ -123,6 +131,150 @@
 							</a>
 						</div>
 					</div>
+				</div>
+			</div>
+
+			<!-- dropdown menu -->
+			<div class="catalog_menu_inner">
+				<div class="dropdown-pane catalog_menu" id="catalog_menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
+					<ul class="catalog_menu_content">
+						<li class="catalog_menu_block">
+							<a href="#" class="catalog_menu_title">Детские издания</a>
+							<ul class="menu vertical nested">
+								<li><a href="#">В помощь родителям</a></li>
+								<li><a href="#">Читаем детям</a></li>
+								<li><a href="#">Моя первая книга</a></li>
+								<li><a href="#">Внеклассное чтение</a></li>
+								<li><a href="#">Развивашки</a></li>
+								<li><a href="#">Детские книги</a></li>
+								<li><a href="#">Растем вместе</a></li>
+								<li><a href="#">Дошколята</a></li>
+							</ul>
+						</li>
+						<li class="catalog_menu_block">
+							<a href="#" class="catalog_menu_title">Для досуга и творчества</a>
+							<ul>
+								<li><a href="#">Кулинария</a></li>
+								<li><a href="#">Рукоделие</a></li>
+								<li><a href="#">Ремесла</a></li>
+								<li><a href="#">Охота и рыбалка</a></li>
+								<li><a href="#">Полезные советы</a></li>
+								<li><a href="#">Сад и огород</a></li>
+							</ul>
+						</li>
+						<li class="catalog_menu_block">
+							<a href="#" class="catalog_menu_title">Художественная литература</a>
+							<ul>
+								<li><a href="#">Классика</a></li>
+								<li><a href="#">Проза</a></li>
+								<li><a href="#">Поэзия</a></li>
+								<li><a href="#">Драма</a></li>
+								<li><a href="#">Роман</a></li>
+								<li><a href="#">Детектив</a></li>
+								<li><a href="#">Мистика</a></li>
+								<li><a href="#">Фэнтези</a></li>
+								<li><a href="#">Книги про любовь</a></li>
+								<li><a href="#">Современная проза</a></li>
+							</ul>
+						</li>
+						<li class="catalog_menu_block">
+							<a href="#" class="catalog_menu_title">Краеведческая литература</a>
+							<ul>
+								<li><a href="#">История родного края</a></li>
+								<li><a href="#">Великая Отечественная война</a></li>
+								<li><a href="#">Выдающиеся личности</a></li>
+								<li><a href="#">Подарочные фотоальбомы</a></li>
+								<li><a href="#">Энциклопедии и справочники</a></li>
+								<li><a href="#">Увлекательное краеведение</a></li>
+							</ul>
+						</li>
+						<li class="catalog_menu_block">
+							<a href="#" class="catalog_menu_title">Нехудожественная литература</a>
+							<ul>
+								<li><a href="#">Нон-фикшн</a></li>
+								<li><a href="#">Медицина и здоровье</a></li>
+								<li><a href="#">Спорт</a></li>
+								<li><a href="#">Психология</a></li>
+								<li><a href="#">Саморазвитие</a></li>
+								<li><a href="#">Мемуары и биографии</a></li>
+								<li><a href="#">Искусство и культура</a></li>
+								<li><a href="#">Здоровье и красота</a></li>
+								<li><a href="#">Эзотерика</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mobile_menu_inner dropdown-pane" id="mobile_menu" data-dropdown data-auto-focus="true" data-close-on-click="true">
+				<div class="mobile_menu">
+					<ul class="vertical menu drilldown" data-drilldown data-back-button='<li class="js-drilldown-back"><a tabindex="0">Назад</a></li>'>
+						<li>
+							<a href="#">Каталог товаров</a>
+							<ul class="menu vertical nested">
+					      <li>
+									<a href="#" class="catalog_menu_title">Книги</a>
+									<ul class="menu vertical nested">
+										<li><a href="#">Детские издания</a></li>
+										<li><a href="#">Для досуга и творчества</a></li>
+										<li><a href="#">Художественная литература</a></li>
+										<li><a href="#">Нехудожественная литература</a></li>
+										<li><a href="#">Краеведческая литература</a></li>
+									</ul>
+								</li>
+					      <li>
+									<a href="#" class="catalog_menu_title">Учебные издания</a>
+									<ul class="menu vertical nested">
+										<li><a href="#">Детские издания</a></li>
+										<li><a href="#">Для досуга и творчества</a></li>
+										<li><a href="#">Художественная литература</a></li>
+										<li><a href="#">Нехудожественная литература</a></li>
+										<li><a href="#">Краеведческая литература</a></li>
+									</ul>
+								</li>
+					      <li>
+									<a href="#" class="catalog_menu_title">Игрушки и игры</a>
+									<ul class="menu vertical nested">
+										<li><a href="#">Детские издания</a></li>
+										<li><a href="#">Для досуга и творчества</a></li>
+										<li><a href="#">Художественная литература</a></li>
+										<li><a href="#">Нехудожественная литература</a></li>
+										<li><a href="#">Краеведческая литература</a></li>
+									</ul>
+								</li>
+					      <li>
+									<a href="#" class="catalog_menu_title">Подарки, сувениры и букбоксы</a>
+									<ul class="menu vertical nested">
+										<li><a href="#">Детские издания</a></li>
+										<li><a href="#">Для досуга и творчества</a></li>
+										<li><a href="#">Художественная литература</a></li>
+										<li><a href="#">Нехудожественная литература</a></li>
+										<li><a href="#">Краеведческая литература</a></li>
+									</ul>
+								</li>
+					    </ul>
+						</li>
+						<li>
+							<a href="#">Личный кабинет</a>
+						</li>
+						<li>
+							<a href="#">Издательство</a>
+						</li>
+						<li>
+							<a href="#">Услуги</a>
+						</li>
+						<li>
+							<a href="#">Магазины</a>
+						</li>
+						<li>
+							<a href="#">Новости и события</a>
+						</li>
+						<li>
+							<a href="#">Оплата и доставка</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 
@@ -807,42 +959,48 @@
 			<div class="footer">
 				<div class="footer_top">
 					<div class="footer_container">
-						<div class="footer_inner">
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<ul>
-									<li><a href="#">Книги</a></li>
-									<li><a href="#">Учебные издания</a></li>
-									<li><a href="#">Игрушки и игры</a></li>
-									<li><a href="#">Подарки, сувениры и букбоксы</a></li>
-								</ul>
-							</div>
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<ul>
-									<li><a href="#">О нас</a></li>
-									<li><a href="#">Услуги</a></li>
-									<li><a href="#">Магазины</a></li>
-									<li><a href="#">Новости и события</a></li>
-									<li><a href="#">Оплата и доставка</a></li>
-									<li><a href="#">Контакты</a></li>
-								</ul>
-							</div>
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<div class="footer_text">
-									<p>Акционерное Общество "Национальная издательская компания "Бичик" им. С.А. Новгородова"</p>
-									<p>г. Якутск, ул. Курашова, 30/1</p>
-									<p>Телефон: 8-800-250-13-38</p>
-									<p>Электронная почта: <a href="mailto:book@bichik.ru">book@bichik.ru</a></p>
-								</div>
-								<div class="footer_soc">
-									<p>Мы в социальных сетях</p>
+						<div class="footer_inner accordion" data-responsive-accordion-tabs="accordion small-accordion">
+							<div class="footer_block" data-accordion-item>
+								<a class="footer_block_title">Каталог товаров</a>
+								<div class="footer_block_content" data-tab-content>
 									<ul>
-										<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
-										<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
-										<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+										<li><a href="#">Книги</a></li>
+										<li><a href="#">Учебные издания</a></li>
+										<li><a href="#">Игрушки и игры</a></li>
+										<li><a href="#">Подарки, сувениры и букбоксы</a></li>
 									</ul>
+								</div>
+							</div>
+							<div class="footer_block" data-accordion-item>
+								<a class="footer_block_title">Издательство</a>
+								<div class="footer_block_content" data-tab-content>
+									<ul>
+										<li><a href="#">О нас</a></li>
+										<li><a href="#">Услуги</a></li>
+										<li><a href="#">Магазины</a></li>
+										<li><a href="#">Новости и события</a></li>
+										<li><a href="#">Оплата и доставка</a></li>
+										<li><a href="#">Контакты</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer_block is-active" data-accordion-item>
+								<a class="footer_block_title">Контакты</a>
+								<div class="footer_block_content" data-tab-content>
+									<div class="footer_text">
+										<p>Акционерное Общество "Национальная издательская компания "Бичик" им. С.А. Новгородова"</p>
+										<p>г. Якутск, ул. Курашова, 30/1</p>
+										<p>Телефон: 8-800-250-13-38</p>
+										<p>Электронная почта: <a href="mailto:book@bichik.ru">book@bichik.ru</a></p>
+									</div>
+									<div class="footer_soc">
+										<p>Мы в социальных сетях</p>
+										<ul>
+											<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+											<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+											<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -864,6 +1022,7 @@
 	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script src="main.js"></script>
 	<script type="text/javascript">
+<<<<<<< HEAD
 	$('.box_content').slick({
 		arrows: false,
 		fade: false,
@@ -885,6 +1044,79 @@
 			// settings: "unslick"
 			// instead of a settings object
 		]
+=======
+	$(window).on('load resize', function() {
+	    if ($(window).width() < 1400) {
+		    $('.box_content').slick({
+	      		arrows: false,
+	      		fade: false,
+						prevArrow: $('.left_slide'),
+						nextArrow: $('.right_slide'),
+						slidesToShow: 5,
+						slidesToScroll: 5,
+						swipeToSlide: true,
+						cssEase: 'linear',
+						responsive: [
+							{
+							  breakpoint: 1200,
+							  settings: {
+								slidesToShow: 4,
+							  }
+							},
+							{
+							  breakpoint: 920,
+							  settings: {
+								slidesToShow: 3,
+							  }
+							},
+							{
+							  breakpoint: 768,
+							  settings: {
+								slidesToShow: 2,
+							  }
+							},
+							{
+							  breakpoint: 532,
+							  settings: {
+								slidesToShow: 1,
+							  }
+							}
+						]
+	      	});
+	    } else {
+	   		$(".box_content").slick("unslick");
+	    }
+
+		if ($(window).width() < 768) {
+			$('.box_best_inner').slick({
+    		arrows: false,
+    		fade: false,
+				prevArrow: $('.left_slide'),
+				nextArrow: $('.right_slide'),
+				slidesToShow: 2,
+				slidesToScroll: 5,
+				swipeToSlide: true,
+				cssEase: 'linear',
+				responsive: [
+					{
+					  breakpoint: 768,
+					  settings: {
+						slidesToShow: 2,
+					  }
+					},
+					{
+					  breakpoint: 532,
+					  settings: {
+						slidesToShow: 1,
+					  }
+					}
+				]
+    	});
+		} else {
+
+   		$(".box_best_inner").slick("unslick");
+    }
+>>>>>>> 3081c3b042be83f59f6786e15da64354246cf6f5
 	});
 	</script>
 </html>

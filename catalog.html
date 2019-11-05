@@ -6,11 +6,15 @@
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="vendor/foundation/css/foundation.css">
 		<link rel="stylesheet" href="vendor/foundation/css/app.css">
+		<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<div class="wrap">
 			<div class="header_inner">
+				<div class="mobile_burger">
+					<a href="#" data-toggle="offCanvas"><img src="img/burger.svg" alt=""></a>
+				</div>
 				<div class="header_logo">
 					<a href="#">
 						<div class="header_logo_img">
@@ -20,8 +24,8 @@
 				</div>
 				<div class="header_menu_inner">
 					<div class="header_top_content">
-						<div class="header_top_menu">
-							<ul>
+						<div class="header_top_menu topmenu greedy">
+							<ul class="links">
 								<li><a href="#">Издательство</a></li>
 								<li><a href="#">Услуги</a></li>
 								<li><a href="#">Магазины</a></li>
@@ -29,6 +33,8 @@
 								<li><a href="#">Оплата и доставка</a></li>
 								<li><a href="#">Контакты</a></li>
 							</ul>
+							<button class="hidden" data-toggle="dropdown">Еще...</button>
+							<ul class='hidden-links hidden dropdown-pane dropdown_menu'  id="dropdown" data-dropdown data-auto-focus="true" data-close-on-click="true" data-close-on-click-inside="true"></ul>
 						</div>
 						<div class="header_top_url">
 							<div class="header_top_login">
@@ -128,7 +134,7 @@
 					<h2>ДЕТСКИЕ ИЗДАНИЯ</h2>
 				</div>
 				<div class="box_container">
-					<div class="box_content">
+					<div class="box_content box_new_inner">
 						<div class="box_block">
 							<div class="box_img_content">
 								<div class="box_img">
@@ -138,81 +144,11 @@
 									<img src="img/el_book.svg" alt="">
 								</div>
 							</div>
+							<div class="box_content_cat box_cat_new">
+								<span>Новинка</span>
+							</div>
 							<div class="box_content_title">
 								<h5>Величие и красота рек Якутии</h5>
-							</div>
-							<div class="razdel_price">
-								<span>2 314 ₽</span>
-							</div>
-							<a href="#" class="box_url"></a>
-						</div>
-						<div class="box_block">
-							<div class="box_img_content">
-								<div class="box_img">
-									<img src="book/book2.png" alt="">
-								</div>
-								<div class="box_sticker">
-									<img src="img/audio.svg" alt="">
-								</div>
-							</div>
-							<div class="box_content_title">
-								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-							</div>
-							<div class="razdel_price">
-								<span>2 314 ₽</span>
-							</div>
-							<a href="#" class="box_url"></a>
-						</div>
-						<div class="box_block">
-							<div class="box_img_content">
-								<div class="box_img">
-									<img src="book/book3.png" alt="">
-								</div>
-							</div>
-							<div class="box_content_title">
-								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-							</div>
-							<div class="razdel_price">
-								<span>2 314 ₽</span>
-							</div>
-							<a href="#" class="box_url"></a>
-						</div>
-						<div class="box_block">
-							<div class="box_img_content">
-								<div class="box_img">
-									<img src="book/book4.png" alt="">
-								</div>
-							</div>
-							<div class="box_content_title">
-								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-							</div>
-							<div class="razdel_price">
-								<span>2 314 ₽</span>
-							</div>
-							<a href="#" class="box_url"></a>
-						</div>
-						<div class="box_block">
-							<div class="box_img_content">
-								<div class="box_img">
-									<img src="book/book5.png" alt="">
-								</div>
-							</div>
-							<div class="box_content_title">
-								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
-							</div>
-							<div class="razdel_price">
-								<span>2 314 ₽</span>
-							</div>
-							<a href="#"></a>
-						</div>
-						<div class="box_block">
-							<div class="box_img_content">
-								<div class="box_img">
-									<img src="book/book6.png" alt="">
-								</div>
-							</div>
-							<div class="box_content_title">
-								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
 							</div>
 							<div class="razdel_price">
 								<span>2 314 ₽</span>
@@ -228,6 +164,9 @@
 									<img src="img/el_book.svg" alt="">
 								</div>
 							</div>
+							<div class="box_content_cat box_cat_new">
+								<span>Новинка</span>
+							</div>
 							<div class="box_content_title">
 								<h5>Величие и красота рек Якутии</h5>
 							</div>
@@ -239,14 +178,17 @@
 						<div class="box_block">
 							<div class="box_img_content">
 								<div class="box_img">
-									<img src="book/book2.png" alt="">
+									<img src="book/book1.png" alt="">
 								</div>
 								<div class="box_sticker">
-									<img src="img/audio.svg" alt="">
+									<img src="img/el_book.svg" alt="">
 								</div>
 							</div>
+							<div class="box_content_cat box_cat_new">
+								<span>Новинка</span>
+							</div>
 							<div class="box_content_title">
-								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+								<h5>Величие и красота рек Якутии</h5>
 							</div>
 							<div class="razdel_price">
 								<span>2 314 ₽</span>
@@ -256,11 +198,17 @@
 						<div class="box_block">
 							<div class="box_img_content">
 								<div class="box_img">
-									<img src="book/book3.png" alt="">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
 								</div>
 							</div>
+							<div class="box_content_cat box_cat_new">
+								<span>Новинка</span>
+							</div>
 							<div class="box_content_title">
-								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+								<h5>Величие и красота рек Якутии</h5>
 							</div>
 							<div class="razdel_price">
 								<span>2 314 ₽</span>
@@ -270,11 +218,17 @@
 						<div class="box_block">
 							<div class="box_img_content">
 								<div class="box_img">
-									<img src="book/book4.png" alt="">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
 								</div>
 							</div>
+							<div class="box_content_cat box_cat_new">
+								<span>Новинка</span>
+							</div>
 							<div class="box_content_title">
-								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+								<h5>Величие и красота рек Якутии</h5>
 							</div>
 							<div class="razdel_price">
 								<span>2 314 ₽</span>
@@ -284,25 +238,139 @@
 						<div class="box_block">
 							<div class="box_img_content">
 								<div class="box_img">
-									<img src="book/book5.png" alt="">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
 								</div>
 							</div>
+							<div class="box_content_cat box_cat_new">
+								<span>Новинка</span>
+							</div>
 							<div class="box_content_title">
-								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+								<h5>Величие и красота рек Якутии</h5>
 							</div>
 							<div class="razdel_price">
 								<span>2 314 ₽</span>
 							</div>
-							<a href="#"></a>
+							<a href="#" class="box_url"></a>
+						</div>
+					</div>
+					<div class="box_content box_new_inner">
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
+								</div>
+							</div>
+							<div class="box_content_cat box_cat_best">
+								<span>Бестселлер</span>
+							</div>
+							<div class="box_content_title">
+								<h5>Величие и красота рек Якутии</h5>
+							</div>
+							<div class="razdel_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
 						</div>
 						<div class="box_block">
 							<div class="box_img_content">
 								<div class="box_img">
-									<img src="book/book6.png" alt="">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
 								</div>
 							</div>
+							<div class="box_content_cat box_cat_best">
+								<span>Бестселлер</span>
+							</div>
 							<div class="box_content_title">
-								<h5>Өбүгэ таҥаһа: бэлиэлэр, ымыылар</h5>
+								<h5>Величие и красота рек Якутии</h5>
+							</div>
+							<div class="razdel_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
+								</div>
+							</div>
+							<div class="box_content_cat box_cat_best">
+								<span>Бестселлер</span>
+							</div>
+							<div class="box_content_title">
+								<h5>Величие и красота рек Якутии</h5>
+							</div>
+							<div class="razdel_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
+								</div>
+							</div>
+							<div class="box_content_cat box_cat_best">
+								<span>Бестселлер</span>
+							</div>
+							<div class="box_content_title">
+								<h5>Величие и красота рек Якутии</h5>
+							</div>
+							<div class="razdel_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
+								</div>
+							</div>
+							<div class="box_content_cat box_cat_best">
+								<span>Бестселлер</span>
+							</div>
+							<div class="box_content_title">
+								<h5>Величие и красота рек Якутии</h5>
+							</div>
+							<div class="razdel_price">
+								<span>2 314 ₽</span>
+							</div>
+							<a href="#" class="box_url"></a>
+						</div>
+						<div class="box_block">
+							<div class="box_img_content">
+								<div class="box_img">
+									<img src="book/book1.png" alt="">
+								</div>
+								<div class="box_sticker">
+									<img src="img/el_book.svg" alt="">
+								</div>
+							</div>
+							<div class="box_content_cat box_cat_best">
+								<span>Бестселлер</span>
+							</div>
+							<div class="box_content_title">
+								<h5>Величие и красота рек Якутии</h5>
 							</div>
 							<div class="razdel_price">
 								<span>2 314 ₽</span>
@@ -323,25 +391,25 @@
 						</div>
 					</div>
 					<div class="cat_block">
-						<div class="cat_content">
+						<div class="cat_content" style="background-image: url(./img/cat_back1.jpg)">
 							<h3>3-6 лет</h3>
 							<a href="#"></a>
 						</div>
 					</div>
 					<div class="cat_block">
-						<div class="cat_content">
+						<div class="cat_content" style="background-image: url(./img/cat_back2.jpg)">
 							<h3>6-7 лет</h3>
 							<a href="#"></a>
 						</div>
 					</div>
 					<div class="cat_block">
-						<div class="cat_content">
+						<div class="cat_content" style="background-image: url(./img/cat_back3.jpg)">
 							<h3>7-12 лет</h3>
 							<a href="#"></a>
 						</div>
 					</div>
 					<div class="cat_block">
-						<div class="cat_content">
+						<div class="cat_content" style="background-image: url(./img/cat_back4.jpg)">
 							<h3>Старше 12 лет</h3>
 							<a href="#"></a>
 						</div>
@@ -350,7 +418,7 @@
 			</div>
 
 			<!-- РАЗДЕЛЫ -->
-			<div class="razdel razdel1">
+			<div class="razdel razdel1" style="background-image:url(./img/razdel1.jpg)">
 				<div class="razdel_container">
 					<div class="razdel_desc">
 						<div class="razdel_desc_content">
@@ -429,7 +497,7 @@
 				</div>
 			</div>
 
-			<div class="razdel razdel2">
+			<div class="razdel razdel2" style="background-image:url(./img/razdel2.jpg)">
 				<div class="razdel_container">
 					<div class="razdel_desc">
 						<div class="razdel_desc_content">
@@ -508,7 +576,7 @@
 				</div>
 			</div>
 
-			<div class="razdel razdel3">
+			<div class="razdel razdel3" style="background-image:url(./img/razdel3.jpg)">
 				<div class="razdel_container">
 					<div class="razdel_desc">
 						<div class="razdel_desc_content">
@@ -587,7 +655,7 @@
 				</div>
 			</div>
 
-			<div class="razdel razdel4">
+			<div class="razdel razdel4" style="background-image:url(./img/razdel4.jpg)">
 				<div class="razdel_container">
 					<div class="razdel_desc">
 						<div class="razdel_desc_content">
@@ -666,7 +734,7 @@
 				</div>
 			</div>
 
-			<div class="razdel razdel5">
+			<div class="razdel razdel5" style="background-image:url(./img/razdel5.jpg)">
 				<div class="razdel_container">
 					<div class="razdel_desc">
 						<div class="razdel_desc_content">
@@ -745,7 +813,7 @@
 				</div>
 			</div>
 
-			<div class="razdel razdel6">
+			<div class="razdel razdel6" style="background-image:url(./img/razdel6.jpg)">
 				<div class="razdel_container">
 					<div class="razdel_desc">
 						<div class="razdel_desc_content">
@@ -824,11 +892,11 @@
 				</div>
 			</div>
 
-			<div class="razdel razdel7">
+			<div class="razdel razdel7" style="background-image:url(./img/razdel7.jpg)">
 				<div class="razdel_container">
 					<div class="razdel_desc">
 						<div class="razdel_desc_content">
-							<h5>Детские книги</h5>
+							<h5>Растем вместе</h5>
 							<span>Равным образом постоянный количественный рост и сфера нашей активности позволяет оценить значение систем массового участия. Задача организации, в особенности же начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития. </span>
 						</div>
 					</div>
@@ -903,11 +971,11 @@
 				</div>
 			</div>
 
-			<div class="razdel razdel8">
+			<div class="razdel razdel8" style="background-image:url(./img/razdel8.jpg)">
 				<div class="razdel_container">
 					<div class="razdel_desc">
 						<div class="razdel_desc_content">
-							<h5>Детские книги</h5>
+							<h5>Дошколята</h5>
 							<span>Равным образом постоянный количественный рост и сфера нашей активности позволяет оценить значение систем массового участия. Задача организации, в особенности же начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития. </span>
 						</div>
 					</div>
@@ -985,42 +1053,48 @@
 			<div class="footer">
 				<div class="footer_top">
 					<div class="footer_container">
-						<div class="footer_inner">
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<ul>
-									<li><a href="#">Книги</a></li>
-									<li><a href="#">Учебные издания</a></li>
-									<li><a href="#">Игрушки и игры</a></li>
-									<li><a href="#">Подарки, сувениры и букбоксы</a></li>
-								</ul>
-							</div>
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<ul>
-									<li><a href="#">О нас</a></li>
-									<li><a href="#">Услуги</a></li>
-									<li><a href="#">Магазины</a></li>
-									<li><a href="#">Новости и события</a></li>
-									<li><a href="#">Оплата и доставка</a></li>
-									<li><a href="#">Контакты</a></li>
-								</ul>
-							</div>
-							<div class="footer_block">
-								<span class="footer_block_title">Каталог товаров</span>
-								<div class="footer_text">
-									<p>Акционерное Общество "Национальная издательская компания "Бичик" им. С.А. Новгородова"</p>
-									<p>г. Якутск, ул. Курашова, 30/1</p>
-									<p>Телефон: 8-800-250-13-38</p>
-									<p>Электронная почта: <a href="mailto:book@bichik.ru">book@bichik.ru</a></p>
-								</div>
-								<div class="footer_soc">
-									<p>Мы в социальных сетях</p>
+						<div class="footer_inner accordion" data-responsive-accordion-tabs="accordion small-accordion">
+							<div class="footer_block" data-accordion-item>
+								<a class="footer_block_title">Каталог товаров</a>
+								<div class="footer_block_content" data-tab-content>
 									<ul>
-										<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
-										<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
-										<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+										<li><a href="#">Книги</a></li>
+										<li><a href="#">Учебные издания</a></li>
+										<li><a href="#">Игрушки и игры</a></li>
+										<li><a href="#">Подарки, сувениры и букбоксы</a></li>
 									</ul>
+								</div>
+							</div>
+							<div class="footer_block" data-accordion-item>
+								<a class="footer_block_title">Издательство</a>
+								<div class="footer_block_content" data-tab-content>
+									<ul>
+										<li><a href="#">О нас</a></li>
+										<li><a href="#">Услуги</a></li>
+										<li><a href="#">Магазины</a></li>
+										<li><a href="#">Новости и события</a></li>
+										<li><a href="#">Оплата и доставка</a></li>
+										<li><a href="#">Контакты</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer_block is-active" data-accordion-item>
+								<a class="footer_block_title">Контакты</a>
+								<div class="footer_block_content" data-tab-content>
+									<div class="footer_text">
+										<p>Акционерное Общество "Национальная издательская компания "Бичик" им. С.А. Новгородова"</p>
+										<p>г. Якутск, ул. Курашова, 30/1</p>
+										<p>Телефон: 8-800-250-13-38</p>
+										<p>Электронная почта: <a href="mailto:book@bichik.ru">book@bichik.ru</a></p>
+									</div>
+									<div class="footer_soc">
+										<p>Мы в социальных сетях</p>
+										<ul>
+											<li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+											<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+											<li><a href="#"><img src="img/youtube.svg" alt=""></a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1033,11 +1107,131 @@
 				</div>
 			</div>
 		</div>
+		<div class="off-canvas-wrapper">
+			<div class="off-canvas position-left mobile_canvas" id="offCanvas" data-off-canvas>
+				<ul class="mobile-ofc vertical menu">
+					<li><a href="#" class="">Каталог</a></li>
+					<li><a href="#" class="">Личный кабинет</a></li>
+					<li><a href="#" class="">Издательствот</a></li>
+					<li><a href="#" class="active">Услуги</a></li>
+					<li><a href="#" class="">Магазины</a></li>
+					<li><a href="#" class="">Новости и события</a></li>
+					<li><a href="#" class="">Оплата и доставка</a></li>
+					<li><a href="#" class="">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
 	</body>
 
 	<script src="vendor/foundation/js/vendor/jquery.js"></script>
 	<script src="vendor/foundation/js/vendor/what-input.js"></script>
 	<script src="vendor/foundation/js/vendor/foundation.js"></script>
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script src="vendor/foundation/js/app.js"></script>
 	<script src="main.js"></script>
+	<script type="text/javascript">
+	$(window).on('load resize', function() {
+	    if ($(window).width() < 1400) {
+				$('.razdel_book').slick({
+	      		arrows: false,
+	      		fade: false,
+						prevArrow: $('.left_slide'),
+						nextArrow: $('.right_slide'),
+						slidesToShow: 5,
+						slidesToScroll: 5,
+						swipeToSlide: true,
+						cssEase: 'linear',
+						responsive: [
+							{
+							  breakpoint: 1200,
+							  settings: {
+								slidesToShow: 4,
+							  }
+							},
+							{
+							  breakpoint: 920,
+							  settings: {
+								slidesToShow: 3,
+							  }
+							},
+							{
+							  breakpoint: 768,
+							  settings: {
+								slidesToShow: 2,
+							  }
+							}
+						]
+	      	});
+		    $('.box_content').slick({
+	      		arrows: false,
+	      		fade: false,
+						prevArrow: $('.left_slide'),
+						nextArrow: $('.right_slide'),
+						slidesToShow: 5,
+						slidesToScroll: 5,
+						swipeToSlide: true,
+						cssEase: 'linear',
+						responsive: [
+							{
+							  breakpoint: 1200,
+							  settings: {
+								slidesToShow: 4,
+							  }
+							},
+							{
+							  breakpoint: 920,
+							  settings: {
+								slidesToShow: 3,
+							  }
+							},
+							{
+							  breakpoint: 768,
+							  settings: {
+								slidesToShow: 2,
+							  }
+							}
+						]
+	      	});
+
+					$('.box_cat').slick({
+							arrows: false,
+							fade: false,
+							slidesToShow: 4,
+							slidesToScroll: 1,
+							swipeToSlide: true,
+							cssEase: 'linear',
+							responsive: [
+								{
+									breakpoint: 1200,
+									settings: {
+									slidesToShow: 4,
+									}
+								},
+								{
+									breakpoint: 920,
+									settings: {
+									slidesToShow: 3,
+									}
+								},
+								{
+									breakpoint: 768,
+									settings: {
+									slidesToShow: 2,
+									}
+								},
+								{
+									breakpoint: 532,
+									settings: {
+									slidesToShow: 1,
+									}
+								}
+							]
+						});
+	    } else {
+	   		$(".box_content").slick("unslick");
+				$(".box_cat").slick("unslick");
+				$(".razdel_book").slick("unslick");
+	    }
+	});
+	</script>
 </html>
