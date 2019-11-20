@@ -892,6 +892,16 @@ ul.hidden-links {
 	margin-right: -15px;
 	padding-bottom: 60px;
 	width: 100%;
+	height: 200px;
+	visibility: hidden;
+	overflow: hidden;
+	opacity: 0;
+	transition: visibility 0s linear 300ms, opacity 300ms;
+}
+.box_cat.slick-initialized.slick-slider {
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0s linear 0s, opacity 300ms;
 }
 .cat_content {
 	position: relative;

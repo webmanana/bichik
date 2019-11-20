@@ -414,6 +414,36 @@
 							<a href="#"></a>
 						</div>
 					</div>
+					<div class="cat_block">
+						<div class="cat_content" style="background-image: url(./img/cat_back.jpg)">
+							<h3>Детям 0-3 лет</h3>
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="cat_block">
+						<div class="cat_content" style="background-image: url(./img/cat_back1.jpg)">
+							<h3>3-6 лет</h3>
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="cat_block">
+						<div class="cat_content" style="background-image: url(./img/cat_back2.jpg)">
+							<h3>6-7 лет</h3>
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="cat_block">
+						<div class="cat_content" style="background-image: url(./img/cat_back3.jpg)">
+							<h3>7-12 лет</h3>
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="cat_block">
+						<div class="cat_content" style="background-image: url(./img/cat_back4.jpg)">
+							<h3>Старше 12 лет</h3>
+							<a href="#"></a>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -1130,6 +1160,40 @@
 	<script src="vendor/foundation/js/app.js"></script>
 	<script src="main.js"></script>
 	<script type="text/javascript">
+	$('.box_cat').slick({
+			arrows: false,
+			fade: false,
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			swipeToSlide: true,
+			cssEase: 'linear',
+			responsive: [
+				{
+					breakpoint: 1300,
+					settings: {
+					slidesToShow: 4,
+					}
+				},
+				{
+					breakpoint: 1024,
+					settings: {
+					slidesToShow: 3,
+					}
+				},
+				{
+					breakpoint: 820,
+					settings: {
+					slidesToShow: 2,
+					}
+				},
+				{
+					breakpoint: 532,
+					settings: {
+					slidesToShow: 1,
+					}
+				}
+			]
+		});
 	$(window).on('load resize', function() {
 	    if ($(window).width() < 1400) {
 				$('.razdel_book').slick({
@@ -1193,43 +1257,9 @@
 						]
 	      	});
 
-					$('.box_cat').slick({
-							arrows: false,
-							fade: false,
-							slidesToShow: 4,
-							slidesToScroll: 1,
-							swipeToSlide: true,
-							cssEase: 'linear',
-							responsive: [
-								{
-									breakpoint: 1200,
-									settings: {
-									slidesToShow: 4,
-									}
-								},
-								{
-									breakpoint: 920,
-									settings: {
-									slidesToShow: 3,
-									}
-								},
-								{
-									breakpoint: 768,
-									settings: {
-									slidesToShow: 2,
-									}
-								},
-								{
-									breakpoint: 532,
-									settings: {
-									slidesToShow: 1,
-									}
-								}
-							]
-						});
+
 	    } else {
 	   		$(".box_content").slick("unslick");
-				$(".box_cat").slick("unslick");
 				$(".razdel_book").slick("unslick");
 	    }
 	});
