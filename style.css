@@ -30,6 +30,16 @@ input::placeholder {
 .wrap {
 	background: #f9f9f9;
 }
+.main_big {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.main_block {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 /* header */
 .dropdown_menu {
 	padding: 0;
