@@ -280,6 +280,37 @@
 					background-position: center;
 					background-size: cover;
 				}
+				.main_big {
+					position: relative;
+				}
+				.arrow_left_slider {
+					width: 40px;
+					height: 40px;
+					display: flex!important;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					left: 20px;
+					top: 45%;
+					background: #9b1515;
+					border-radius: 50%;
+					z-index: 11;
+					padding-right: 3px;
+				}
+				.arrow_right_slider {
+					width: 40px;
+					height: 40px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					right: 20px;
+					top: 45%;
+					background: #9b1515;
+					border-radius: 50%;
+					z-index: 11;
+					padding-left: 3px;
+				}
 				@media (max-width: 768px) {
 					.main_slider_block {
 						height: 350px;
@@ -289,10 +320,17 @@
 					.main_slider_block {
 						height: 200px;
 					}
+					.arrow_left_slider, .arrow_right_slider {
+						width: 30px;
+						height: 30px;
+					}
 				}
 			</style>
 			<div class="main_inner">
 				<div class="main_big">
+					<a href="#" class="arrow_left_slider">
+						<img src="img/arrow_left_slider.svg" alt="">
+					</a>
 					<div class="main_slider">
 						<a href="#" class="main_slider_block" style="background-image:url(img/razdel1.jpg)">
 
@@ -304,6 +342,9 @@
 
 						</a>
 					</div>
+					<a href="#" class="arrow_right_slider">
+						<img src="img/arrow_right_slider.svg" alt="">
+					</a>
 				</div>
 				<div class="main_small">
 					<a href="#" class="main_block main_1" style="background-image:url(img/razdel1.jpg)">
@@ -1118,10 +1159,10 @@
     }
 	});
 	$('.main_slider').slick({
-			arrows: false,
+			arrows: true,
 			fade: false,
-			prevArrow: $('.left_slide'),
-			nextArrow: $('.right_slide'),
+			prevArrow: $('.arrow_left_slider'),
+			nextArrow: $('.arrow_right_slider'),
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			swipeToSlide: true,
