@@ -273,11 +273,38 @@
 					</ul>
 				</div>
 			</div>
-
+			<style media="screen">
+				.main_slider_block {
+					height: 500px;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
+				}
+				@media (max-width: 768px) {
+					.main_slider_block {
+						height: 350px;
+					}
+				}
+				@media (max-width: 532px) {
+					.main_slider_block {
+						height: 200px;
+					}
+				}
+			</style>
 			<div class="main_inner">
-				<a href="#" class="main_big" style="background-image:url(img/razdel1.jpg)">
+				<div class="main_big">
+					<div class="main_slider">
+						<a href="#" class="main_slider_block" style="background-image:url(img/razdel1.jpg)">
 
-				</a>
+						</a>
+						<a href="#" class="main_slider_block" style="background-image:url(img/razdel1.jpg)">
+
+						</a>
+						<a href="#" class="main_slider_block" style="background-image:url(img/razdel1.jpg)">
+
+						</a>
+					</div>
+				</div>
 				<div class="main_small">
 					<a href="#" class="main_block main_1" style="background-image:url(img/razdel1.jpg)">
 
@@ -1090,5 +1117,15 @@
    		$(".box_best_inner").slick("unslick");
     }
 	});
+	$('.main_slider').slick({
+			arrows: false,
+			fade: false,
+			prevArrow: $('.left_slide'),
+			nextArrow: $('.right_slide'),
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			swipeToSlide: true,
+			cssEase: 'linear',
+		});
 	</script>
 </html>
